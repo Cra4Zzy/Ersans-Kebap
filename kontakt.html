@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kontakt & Vorbestellen · Ersan’s Kebap</title>
+  <meta name="description" content="Jetzt vorbestellen – ohne Warten. Telefon, Öffnungszeiten, Standort und Kontaktformular.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg bg--light" aria-hidden="true"></div>
+
+  <header class="header header--light" data-sticky>
+    <div class="wrap header__row">
+      <a class="brand" href="index.html#top" aria-label="Zur Startseite">
+        <img class="brand__logo" src="logo.png" alt="Ersan’s Kebap Logo" onerror="this.onerror=null; this.src='assets/img/logo.png'">
+        <div class="brand__text"><span class="brand__name">Ersan’s Kebap</span><span class="brand__sub">Kontakt</span></div>
+      </a>
+      <nav class="nav" data-nav>
+        <a class="nav__link" href="index.html#top">Start</a>
+        <a class="nav__link" href="menu.html">Speisekarte</a>
+        <a class="nav__link" href="ueber-uns.html">Über uns</a>
+        <a class="nav__link is-active" href="kontakt.html">Kontakt</a>
+        <a class="btn btn--primary nav__cta" href="#vorbestellen">Jetzt vorbestellen</a>
+      </nav>
+      <button class="burger" type="button" aria-label="Menü öffnen" data-burger><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="pageHero">
+      <div class="wrap" data-reveal="up">
+        <p class="kicker">Kontakt & Standort</p>
+        <h1 class="h1">Jetzt vorbestellen – ohne Warten.</h1>
+        <p class="lead">Sag kurz Bescheid – wir kümmern uns. Kleiner, familiärer Laden: alles frisch, hausgemachte Saucen und Liebe zum Detail.</p>
+      </div>
+    </section>
+
+    <section class="section section--paper" id="vorbestellen">
+      <div class="wrap contactGrid">
+        <aside class="contactCard" data-reveal="up">
+          <h2 class="h3">Schnellkontakt</h2>
+          <div class="info">
+            <div class="info__row"><span>Telefon</span><strong><a href="tel:+4915159078248">0151‑590 78 248</a></strong></div>
+            <div class="info__row"><span>Öffnungszeiten</span><strong>Di–So 12:00–14:00 · 17:00–21:00</strong></div>
+            <div class="info__row"><span>Standort</span><strong>Dr. Martin‑Luther‑Straße 18, 91550 Dinkelsbühl</strong></div>
+          </div>
+         <p class="muted small">
+  Wunschzeit angeben, Bestellung abschicken, heiß abholen. Kartenzahlung möglich.
+  Bitte mindestens <span style="font-weight:800; font-size:1.2em;">1 Tag vorher</span> bestellen und auf Bestätigung warten.
+</p>
+
+
+          <a class="btn btn--primary" href="tel:+4915159078248">Jetzt anrufen</a>
+        </aside>
+
+        <section class="formCard" data-reveal="up" style="transition-delay:.06s">
+          <h2 class="h3">Vorbestellung anfragen</h2>
+          <form id="preorderForm">
+            <div class="fieldGrid">
+              <label class="field">
+                <span>Vorname & Nachname</span>
+                <input required name="name" type="text" placeholder="Max Mustermann">
+              </label>
+              <label class="field">
+                <span>E‑Mail</span>
+                <input required name="email" type="email" placeholder="max@mail.de">
+              </label>
+              <label class="field">
+                <span>Telefon</span>
+                <input name="phone" type="tel" placeholder="0151 …">
+              </label>
+              <label class="field">
+                <span>Abholzeit</span>
+                <input required name="time" type="text" placeholder="z.B. morgen 18:30">
+              </label>
+              <label class="field field--full">
+                <span>Bestellung / Hinweis</span>
+                <textarea required name="msg" rows="6" placeholder="Was möchtest du bestellen? (z.B. 2x Döner normal, 1x Pizza Salami, ohne Zwiebeln …)"></textarea>
+              </label>
+            </div>
+
+            <button class="btn btn--primary" type="submit">Anfrage vorbereiten</button>
+            <p class="muted small">Beim Klick öffnet sich eine vorbereitete Mail (du kannst noch ändern).</p>
+          </form>
+        </section>
+      </div>
+    </section>
+
+    <section class="section" id="karte">
+      <div class="wrap location location--single">
+        <div class="location__map" data-reveal="float">
+          <iframe
+            title="Google Maps Standort"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Dr%20Martin-Luther-Stra%C3%9Fe%2018%2091550%20Dinkelsb%C3%BChl&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer footer--light">
+    <div class="wrap footer__row">
+      <div><strong>Ersan’s Kebap</strong><div class="muted small">© <span data-year></span></div></div>
+      <div class="footer__links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+    </div>
+  </footer>
+
+  <a class="callfab" href="tel:+4915159078248" aria-label="Jetzt anrufen">Anrufen</a>
+  <script src="app.js"></script>
+</body>
+</html>

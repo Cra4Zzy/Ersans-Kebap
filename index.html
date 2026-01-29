@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ersan&rsquo;s Kebap · Döner, Pizza &amp; Currywurst in Dinkelsbühl</title>
+  <meta name="description" content="Qualität, Geschmack, fairer Preis. Frisch zubereitet: Döner, Dürüm, Pizza, Currywurst. Jetzt vorbeikommen!">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <header class="header" data-sticky>
+    <div class="wrap header__row">
+      <a class="brand" href="index.html#top" aria-label="Zur Startseite">
+        <img class="brand__logo" src="logo.png" alt="Ersan&rsquo;s Kebap Logo" onerror="this.onerror=null; this.src='assets/img/logo.png'">
+        <div class="brand__text">
+          <span class="brand__name">Ersan&rsquo;s Kebap</span>
+          <span class="brand__sub">Döner · Pizza · Currywurst</span>
+        </div>
+      </a>
+
+      <nav class="nav" data-nav>
+        <a class="nav__link is-active" href="index.html#top">Start</a>
+        <a class="nav__link" href="menu.html">Speisekarte</a>
+        <a class="nav__link" href="ueber-uns.html">Über uns</a>
+        <a class="nav__link" href="index.html#bewertungen">Bewertungen</a>
+        <a class="nav__link" href="https://www.xn--stern-dinkelsbhl-wzb.de/" target="_blank" rel="noopener">Der Stern</a>
+        <a class="nav__link" href="kontakt.html">Kontakt</a>
+        <a class="btn btn--primary nav__cta" href="kontakt.html#vorbestellen">Jetzt vorbestellen</a>
+      </nav>
+
+      <button class="burger" type="button" aria-label="Menü öffnen" data-burger>
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__copy" data-reveal="up">
+          <p class="kicker">Willkommen bei unserem Imbiss</p>
+          <h1 class="h1">Frisch. Saftig. Ehrlich gut – direkt in Dinkelsbühl.</h1>
+          <p class="lead">
+            Hochwertiges Fleisch, knackiges Gemüse und hausgemachte Saucen – klassisch oder mit besonderen Zutaten.
+            Komm vorbei und genieß den Geschmack des Orients in gemütlicher Atmosphäre.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="menu.html">Zur Speisekarte</a>
+            <a class="btn btn--ghost" href="kontakt.html#vorbestellen">Vorbestellen ohne Warten</a>
+          </div>
+
+          <div class="trust" aria-label="Highlights">
+            <div class="trust__item">
+              <span class="trust__top">Frisch zubereitet</span>
+              <span class="trust__sub">täglich · schnell · sauber</span>
+            </div>
+            <div class="trust__item">
+              <span class="trust__top">Hausgemacht</span>
+              <span class="trust__sub">Saucen &amp; Teige</span>
+            </div>
+            <div class="trust__item">
+              <span class="trust__top">Fair &amp; freundlich</span>
+              <span class="trust__sub">familiärer Laden</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__media" data-reveal="float">
+          <div class="mediaCard" data-tilt>
+            <img src="currywurst2.jpeg" alt="Frisch zubereitete Speisen bei Ersan&rsquo;s Kebap" loading="eager" onerror="this.onerror=null; this.src='assets/img/hero.jpeg'">
+
+            <div class="mediaCard__badge">
+              <span class="badge__k">Dienstags-Special</span>
+              <span class="badge__v">Currywurst + Pommes</span>
+              <span class="badge__s">Bier oder Softdrink gratis (nur im Haus)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANGEBOT -->
+    <section class="section" id="angebot">
+      <div class="wrap">
+        <header class="section__head" data-reveal="up">
+          <h2 class="h2">Was wir anbieten</h2>
+          <p class="muted">Dein Genuss-Stop um die Ecke – Qualität, die man sieht und schmeckt.</p>
+        </header>
+
+        <div class="cards">
+          <article class="card" data-reveal="up">
+            <img src="pizza.jpg" alt="Pizza" loading="lazy" onerror="this.style.display='none'">
+            <h3 class="h3">Pizza</h3>
+            <p class="muted">Luftig-knuspriger Rand, aromatische Sauce, zart schmelzender Käse.</p>
+          </article>
+
+          <article class="card" data-reveal="up" style="transition-delay:.05s">
+            <img src="döner.JPG" alt="Döner und Dürüm" loading="lazy" onerror="this.onerror=null; this.src='döner.jpg';">
+            <h3 class="h3">Dürüm / Döner</h3>
+            <p class="muted">Frisch gegrillt, knackig, cremig – perfekt für unterwegs.</p>
+          </article>
+
+          <article class="card" data-reveal="up" style="transition-delay:.1s">
+            <img src="currywurst2.jpeg" alt="Currywurst mit Pommes" loading="lazy" onerror="this.style.display='none'">
+            <h3 class="h3">Currywurst</h3>
+            <p class="muted">Klassiker, der immer trifft: würzige Sauce, knusprige Pommes.</p>
+          </article>
+        </div>
+
+        <div class="center" data-reveal="up">
+          <a class="btn btn--primary" href="menu.html">Speisekarte ansehen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIAL -->
+    <section class="section section--tint" id="special">
+      <div class="wrap special">
+        <div class="special__copy" data-reveal="up">
+          <p class="kicker">Nur dienstags</p>
+          <h2 class="h2">Currywurst-Special bei Ersan&rsquo;s</h2>
+          <p class="lead2">Bestell eine Currywurst mit Pommes und erhalte ein Bier oder Softdrink gratis dazu (nur im Haus).</p>
+          <a class="btn btn--ghost" href="kontakt.html#vorbestellen">Jetzt vorbestellen</a>
+        </div>
+
+        <div class="special__panel" data-reveal="float">
+          <div class="panelLine"><span>Deal</span><strong>Currywurst + Pommes</strong></div>
+          <div class="panelLine"><span>Extra</span><strong>Getränk gratis</strong></div>
+          <div class="panelLine"><span>Gilt</span><strong>nur im Haus</strong></div>
+          <p class="muted small">Tipp: Früh kommen – ist oft schnell gut besucht.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIE -->
+    <section class="section" id="laden">
+      <div class="wrap">
+        <header class="section__head" data-reveal="up">
+          <h2 class="h2">Unser Laden</h2>
+          <p class="muted">Klein, sauber, schnell – du siehst die Zubereitung direkt vor deinen Augen.</p>
+        </header>
+
+        <div class="gallery" data-reveal="up">
+          <img src="laden-1.jpeg" alt="Laden Impression 1" loading="lazy" onerror="this.onerror=null; this.src='assets/img/laden-1.jpeg'">
+          <img src="laden-2.jpeg" alt="Laden Impression 2" loading="lazy" onerror="this.onerror=null; this.src='assets/img/laden-2.jpeg'">
+          <img src="laden-3.jpeg" alt="Laden Impression 3" loading="lazy" onerror="this.onerror=null; this.src='assets/img/laden-3.jpeg'">
+        </div>
+      </div>
+    </section>
+
+    <!-- BEWERTUNGEN -->
+    <section class="section section--tint" id="bewertungen">
+      <div class="wrap">
+        <header class="section__head" data-reveal="up">
+          <h2 class="h2">Unsere Bewertungen</h2>
+          <p class="muted">Echte Google-Bewertungen – live geladen über Trustindex.</p>
+        </header>
+
+        <div class="widgetBox widgetBox--google" data-reveal="up">
+          <div class="widgetBox__head">
+            <strong>Google Bewertungen</strong>
+            <span class="muted small">Ersan&rsquo;s Kebap</span>
+          </div>
+          <div class="widgetBox__body">
+            <!-- Wichtig: KEIN inline <script> hier, damit Preview/Canvas nicht bricht.
+                 Der Trustindex Loader wird unten per JS nachgeladen. -->
+            <div id="trustindex-root" aria-label="Trustindex Google Reviews">
+  <div class="trustindex-widget" data-lazyload="false" data-widget-id="96eb59a62f8b7227e776bff8b32"></div>
+</div>
+
+
+      <div class="center" style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap; justify-content:center">
+              <a class="btn btn--primary" href="https://search.google.com/local/writereview?placeid=ChIJWxmiMIXpmEcRjEfvTgjj_hg" target="_blank" rel="noopener">Bewertung schreiben</a>
+              <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJWxmiMIXpmEcRjEfvTgjj_hg" target="_blank" rel="noopener">Alle Bewertungen ansehen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNER: Der Stern -->
+    <section class="section section--paper" id="partner">
+      <div class="wrap special">
+        <div class="special__copy" data-reveal="up">
+          <p class="kicker">Partner in Dinkelsbühl</p>
+          <h2 class="h2">Nach dem Essen noch ein Drink? → Der Stern</h2>
+          <p class="lead2">Wenn du nach dem Essen noch gemütlich weiterziehen willst: Unser Partner „Der Stern“ ist eine Bar in Dinkelsbühl. Schau gern vorbei.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="https://www.xn--stern-dinkelsbhl-wzb.de/" target="_blank" rel="noopener">Zur Stern-Website</a>
+            <a class="btn btn--ghost" href="https://www.stern-dinkelsbuehl.de" target="_blank" rel="noopener">Mehr Infos</a>
+          </div>
+        </div>
+
+        <div class="special__panel" data-reveal="float">
+          <div class="panelLine"><span>Empfehlung</span><strong>Bar · Drinks · Atmosphäre</strong></div>
+          <div class="panelLine"><span>Location</span><strong>Dinkelsbühl</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STANDORT -->
+    <section class="section" id="standort">
+      <div class="wrap location">
+        <div class="location__copy" data-reveal="up">
+          <h2 class="h2">Schaue vorbei und überzeuge dich selbst</h2>
+          <p class="muted">
+            Wir bereiten alles frisch zu – knusprig, saftig, unwiderstehlich.
+            Dein nächster Genussmoment wartet im Laden.
+          </p>
+
+          <div class="info">
+            <div class="info__row"><span>Adresse</span><strong>Dr. Martin-Luther-Straße 18, 91550 Dinkelsbühl</strong></div>
+            <div class="info__row"><span>Telefon</span><strong><a href="tel:+4915159078248">0151-590 78 248</a></strong></div>
+            <div class="info__row"><span>Öffnungszeiten</span><strong>Di–So 12:00–14:00 · 17:00–21:00</strong></div>
+          </div>
+
+          <div class="location__actions">
+            <a class="btn btn--primary" href="kontakt.html">Kontakt &amp; Vorbestellung</a>
+            <a class="btn btn--ghost" href="https://www.google.com/maps?q=Dr%20Martin-Luther-Stra%C3%9Fe%2018%2091550%20Dinkelsb%C3%BChl" target="_blank" rel="noopener">Route öffnen</a>
+          </div>
+        </div>
+
+        <div class="location__map" data-reveal="float">
+          <iframe
+            title="Google Maps Standort"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Dr%20Martin-Luther-Stra%C3%9Fe%2018%2091550%20Dinkelsb%C3%BChl&amp;output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__row">
+      <div>
+        <strong>Ersan&rsquo;s Kebap</strong>
+        <div class="muted small">© <span data-year></span> · Dinkelsbühl</div>
+      </div>
+      <div class="footer__links">
+        <a href="https://www.stern-dinkelsbuehl.de" target="_blank" rel="noopener">Der Stern</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="callfab" href="tel:+4915159078248" aria-label="Jetzt anrufen">Anrufen</a>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Über uns · Ersan’s Kebap</title>
+  <meta name="description" content="Unsere Story: renoviert, Wasserschaden, nicht aufgegeben – neuer Standort eröffnet. Familiengeführt & täglich frisch.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg bg--about" aria-hidden="true"></div>
+
+  <header class="header header--light" data-sticky>
+    <div class="wrap header__row">
+      <a class="brand" href="index.html#top" aria-label="Zur Startseite">
+        <img class="brand__logo" src="logo.png" alt="Ersan’s Kebap Logo" onerror="this.onerror=null; this.src='assets/img/logo.png'">
+        <div class="brand__text"><span class="brand__name">Ersan’s Kebap</span><span class="brand__sub">Über uns</span></div>
+      </a>
+      <nav class="nav" data-nav>
+        <a class="nav__link" href="index.html#top">Start</a>
+        <a class="nav__link" href="menu.html">Speisekarte</a>
+        <a class="nav__link is-active" href="ueber-uns.html">Über uns</a>
+        <a class="nav__link" href="kontakt.html">Kontakt</a>
+        <a class="btn btn--primary nav__cta" href="kontakt.html#vorbestellen">Vorbestellen</a>
+      </nav>
+      <button class="burger" type="button" aria-label="Menü öffnen" data-burger><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="page">
+    <!-- PAGE HERO (zentriert & schöner) -->
+    <section class="pageHero pageHero--center">
+      <div class="wrap" data-reveal="up">
+        <p class="kicker">Über uns</p>
+        <h1 class="h1">Unsere Story – wir haben nicht aufgegeben.</h1>
+        <p class="lead">
+          Familiengeführt, täglich frisch und immer mit Herz. Was wir gelernt haben:
+          Rückschläge gehören dazu – wichtig ist, dass man weitermacht.
+        </p>
+
+        <div class="heroPills" aria-label="Highlights">
+          <span class="pill">Frisch zubereitet</span>
+          <span class="pill">Sauber & schnell</span>
+          <span class="pill">Familiengeführt</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--paper">
+      <div class="wrap story">
+        <article class="story__block" data-reveal="up">
+          <h2 class="h2">Warum wir das machen</h2>
+          <p class="muted">
+            Wir lieben ehrliches Essen: gutes Fleisch, frisches Gemüse und Saucen, die nach „hausgemacht“ schmecken.
+            Und wir wollen, dass du dich bei uns wohlfühlst – egal ob schnell to go oder kurz im Laden.
+          </p>
+        </article>
+
+        <!-- STORY als 3 Flip-Cards -->
+        <section class="section" style="padding:30px 0 0">
+          <header class="section__head" data-reveal="up" style="margin-bottom:14px">
+            <h2 class="h2">Unsere Geschichte in 3 Kapiteln</h2>
+            <p class="muted">Tippen oder mit der Maus drüber – vorne kurz, hinten etwas mehr.</p>
+          </header>
+
+          <div class="flipGrid">
+            <!-- 1) Renoviert -->
+            <article class="card" data-reveal="up" style="padding:0">
+              <div class="flip" data-flip>
+                <div class="flip__inner">
+                  <div class="flip__face">
+                    <img src="laden-vorher1.jpg" alt="Renovierung – neuer Standort" loading="lazy" onerror="this.onerror=null; this.src='laden-1.jpeg'">
+                    <div class="flip__tag">Kapitel 1</div>
+                  </div>
+                  <div class="flip__face flip__back">
+                    <img src="laden-vorher2.jpg" alt="Renovierung – fertig" loading="lazy" onerror="this.onerror=null; this.src='laden-2.jpeg'">
+                    <div class="flip__tag">Renoviert</div>
+                  </div>
+                </div>
+              </div>
+              <div style="padding:14px 14px 16px">
+                <h3 class="h3">Neuer Standort – frisch renoviert</h3>
+                <p class="muted">Alles neu gemacht – mit richtig viel Arbeit und Liebe zum Detail.</p>
+              </div>
+            </article>
+
+            <!-- 2) Wasserschaden -->
+            <article class="card" data-reveal="up" style="transition-delay:.06s; padding:0">
+              <div class="flip" data-flip>
+                <div class="flip__inner">
+                  <div class="flip__face">
+                    <img src="wasserschaden1.jpg" alt="Wasserschaden" loading="lazy" onerror="this.onerror=null; this.src='laden-2.jpeg'">
+                    <div class="flip__tag">Kapitel 2</div>
+                  </div>
+                  <div class="flip__face flip__back">
+                    <img src="wasserschaden2.jpg" alt="Wasserschaden – Rückschlag" loading="lazy" onerror="this.onerror=null; this.src='laden-3.jpeg'">
+                    <div class="flip__tag">Rückschlag</div>
+                  </div>
+                </div>
+              </div>
+              <div style="padding:14px 14px 16px">
+                <h3 class="h3">Gerade fertig… dann Wasserschaden</h3>
+                <p class="muted">Richtig bitter – aber aufgeben war für uns nie eine Option.</p>
+              </div>
+            </article>
+
+            <!-- 3) Neueröffnung -->
+            <article class="card" data-reveal="up" style="transition-delay:.12s; padding:0">
+              <div class="flip" data-flip>
+                <div class="flip__inner">
+                  <div class="flip__face">
+                    <img src="neuer-laden1.jpeg" alt="Neuer Standort eröffnet" loading="lazy" onerror="this.onerror=null; this.src='laden-3.jpeg'">
+                    <div class="flip__tag">Kapitel 3</div>
+                  </div>
+                  <div class="flip__face flip__back">
+                    <img src="neuer-laden2.jpeg" alt="Neueröffnung – wir sind wieder da" loading="lazy" onerror="this.onerror=null; this.src='laden-1.jpeg'">
+                    <div class="flip__tag">Neueröffnung</div>
+                  </div>
+                </div>
+              </div>
+              <div style="padding:14px 14px 16px">
+                <h3 class="h3">Neuer Standort eröffnet – wir sind wieder da</h3>
+                <p class="muted">Danke an alle, die uns supporten. Wir geben weiter Vollgas. ❤️</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="center" data-reveal="up">
+            <a class="btn btn--primary" href="menu.html">Zur Speisekarte</a>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer footer--light">
+    <div class="wrap footer__row">
+      <div><strong>Ersan’s Kebap</strong><div class="muted small">© <span data-year></span></div></div>
+      <div class="footer__links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+    </div>
+  </footer>
+
+  <a class="callfab" href="tel:+4915159078248" aria-label="Jetzt anrufen">Anrufen</a>
+  <script src="app.js"></script>
+</body>
+</html>
