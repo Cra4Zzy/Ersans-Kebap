@@ -3,10 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Datenschutz · Ersan’s Kebap</title>
+  <title>Datenschutz · Ersan&rsquo;s Kebap</title>
+  <meta name="description" content="Datenschutzerklärung von Ersan&rsquo;s Kebap – Vorbestellung, Kontakt und Hinweise zu Google Maps.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,17 +18,26 @@
   <header class="header header--light" data-sticky>
     <div class="wrap header__row">
       <a class="brand" href="index.html#top" aria-label="Zur Startseite">
-        <img class="brand__logo" src="logo.png" alt="Ersan’s Kebap Logo" onerror="this.onerror=null; this.src='assets/img/logo.png'">
-        <div class="brand__text"><span class="brand__name">Ersan’s Kebap</span><span class="brand__sub">Datenschutz</span></div>
+        <img class="brand__logo" src="logo.png" alt="Ersan&rsquo;s Kebap Logo" onerror="this.onerror=null; this.src='assets/img/logo.png'">
+        <div class="brand__text">
+          <span class="brand__name">Ersan&rsquo;s Kebap</span>
+          <span class="brand__sub">Döner · Pizza · Currywurst</span>
+        </div>
       </a>
+
       <nav class="nav" data-nav>
         <a class="nav__link" href="index.html#top">Start</a>
         <a class="nav__link" href="menu.html">Speisekarte</a>
         <a class="nav__link" href="ueber-uns.html">Über uns</a>
+        <a class="nav__link" href="index.html#bewertungen">Bewertungen</a>
+        <a class="nav__link" href="https://www.stern-dinkelsbuehl.de" target="_blank" rel="noopener">Der Stern</a>
         <a class="nav__link" href="kontakt.html">Kontakt</a>
-        <a class="btn btn--primary nav__cta" href="kontakt.html#vorbestellen">Vorbestellen</a>
+        <a class="btn btn--primary nav__cta" href="kontakt.html#vorbestellen">Jetzt vorbestellen</a>
       </nav>
-      <button class="burger" type="button" aria-label="Menü öffnen" data-burger><span></span><span></span><span></span></button>
+
+      <button class="burger" type="button" aria-label="Menü öffnen" data-burger>
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -33,31 +45,120 @@
     <section class="pageHero">
       <div class="wrap" data-reveal="up">
         <p class="kicker">Rechtliches</p>
-        <h1 class="h1">Datenschutz</h1>
-        <p class="lead">Hier kommt deine Datenschutz‑Erklärung rein (inkl. Hinweise zu Google Maps & Trustindex/Google Reviews).</p>
+        <h1 class="h1">Datenschutzerklärung</h1>
+        <p class="lead">Kurz & verständlich – mit Fokus auf Vorbestellung / Kontakt.</p>
       </div>
     </section>
 
     <section class="section section--paper">
-      <div class="wrap" data-reveal="up">
-        <div class="contactCard">
-          <h2 class="h2">Kurz‑Hinweis</h2>
+      <div class="wrap" style="display:grid; gap:16px">
+
+        <div class="contactCard" data-reveal="up">
+          <h2 class="h2">1. Verantwortlicher</h2>
           <p class="muted" style="margin:0; line-height:1.75">
-            Diese Seite ist eine Vorlage. Für ein sauberes, rechtssicheres Datenschutz‑Dokument bitte eine passende Vorlage
-            (z. B. Generator) einsetzen und eure konkreten Dienste eintragen (Maps, Reviews, Kontaktformular etc.).
+            <strong>[Firmenname / Inhaber]</strong><br>
+            [Straße Hausnr.], [PLZ Ort], Deutschland<br>
+            E-Mail: <a href="mailto:info@deine-domain.de">[E-Mail-Adresse]</a><br>
+            Telefon: <a href="tel:+49XXXXXXXXXX">[Telefonnummer]</a>
           </p>
         </div>
+
+        <div class="contactCard" data-reveal="up">
+          <h2 class="h2">2. Welche Daten wir verarbeiten</h2>
+          <p class="muted" style="margin:0; line-height:1.75">
+            Beim Nutzen unserer Website können je nach Kontaktweg folgende Daten anfallen:
+          </p>
+          <ul class="muted" style="margin:.65rem 0 0; line-height:1.75">
+            <li>Vor-/Nachname</li>
+            <li>E-Mail-Adresse</li>
+            <li>Telefonnummer (optional)</li>
+            <li>Abholzeit und Bestelltext (Vorbestellung)</li>
+            <li>Technische Daten/Server-Logs (z. B. IP-Adresse, Browser, Zeitpunkt) beim Aufruf der Website</li>
+          </ul>
+        </div>
+
+        <div class="contactCard" data-reveal="up">
+          <h2 class="h2">3. Vorbestellung / Kontakt (Formular via E-Mail)</h2>
+          <p class="muted" style="margin:0; line-height:1.75">
+            Auf unserer Website kann eine Vorbestellung vorbereitet werden. Dabei wird kein Server-Upload durchgeführt,
+            sondern Ihr E-Mail-Programm wird über einen <code>mailto:</code>-Link mit einer vorformatierten Nachricht geöffnet.
+            Die Verarbeitung erfolgt anschließend über unsere E-Mail-Kommunikation.
+          </p>
+          <p class="muted" style="margin:.65rem 0 0; line-height:1.75">
+            <strong>Zweck:</strong> Bearbeitung Ihrer Anfrage/Vorbestellung, Rückfragen, Abwicklung.<br>
+            <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertrag/Anbahnung) und/oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an Kommunikation und Organisation).
+          </p>
+        </div>
+
+        <div class="contactCard" data-reveal="up">
+          <h2 class="h2">4. Empfänger / Dienstleister</h2>
+          <p class="muted" style="margin:0; line-height:1.75">
+            E-Mails werden über unseren E-Mail-Dienst/Provider verarbeitet. Je nach Hosting/E-Mail-Anbieter können Daten dort gespeichert werden.
+            <br><strong>E-Mail-/Hosting-Anbieter:</strong> [Anbieter eintragen, z. B. IONOS]
+          </p>
+        </div>
+
+        <div class="contactCard" data-reveal="up">
+          <h2 class="h2">5. Speicherdauer</h2>
+          <p class="muted" style="margin:0; line-height:1.75">
+            Wir speichern Anfragen und Vorbestellungen nur so lange, wie es für die Bearbeitung erforderlich ist
+            bzw. gesetzliche Aufbewahrungspflichten bestehen (z. B. steuerrechtlich).
+          </p>
+        </div>
+
+        <div class="contactCard" data-reveal="up">
+          <h2 class="h2">6. Google Maps (falls eingebunden)</h2>
+          <p class="muted" style="margin:0; line-height:1.75">
+            Auf unserer Website kann Google Maps eingebunden sein (z. B. als iFrame), um unseren Standort anzuzeigen.
+            Dabei können Daten (z. B. IP-Adresse) an Google übertragen werden. Die Nutzung erfolgt im Interesse einer
+            leichten Auffindbarkeit (Art. 6 Abs. 1 lit. f DSGVO).
+          </p>
+          <p class="muted small" style="margin:.65rem 0 0; line-height:1.75">
+            Hinweis: Wenn du Google Maps nicht nutzt, diesen Punkt einfach löschen.
+          </p>
+        </div>
+
+        <div class="contactCard" data-reveal="up">
+          <h2 class="h2">7. Ihre Rechte</h2>
+          <p class="muted" style="margin:0; line-height:1.75">
+            Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit
+            sowie Widerspruch gegen die Verarbeitung. Außerdem besteht ein Beschwerderecht bei einer Aufsichtsbehörde.
+          </p>
+        </div>
+
+        <div class="contactCard" data-reveal="up">
+          <h2 class="h2">8. Sicherheit</h2>
+          <p class="muted" style="margin:0; line-height:1.75">
+            Wir treffen angemessene technische und organisatorische Maßnahmen, um Ihre Daten zu schützen.
+          </p>
+        </div>
+
+        <p class="muted small" style="margin:0" data-reveal="up">Stand: [Datum eintragen]</p>
+
+        <p class="muted small" style="margin:0" data-reveal="up">
+          Hinweis: Diese Vorlage ist bewusst einfach gehalten. Für maximale Rechtssicherheit bitte final prüfen lassen
+          oder einen Generator/Anwalt nutzen.
+        </p>
       </div>
     </section>
   </main>
 
   <footer class="footer footer--light">
     <div class="wrap footer__row">
-      <div><strong>Ersan’s Kebap</strong><div class="muted small">© <span data-year></span></div></div>
-      <div class="footer__links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+      <div>
+        <strong>Ersan&rsquo;s Kebap</strong>
+        <div class="muted small">© <span data-year></span> · Dinkelsbühl</div>
+      </div>
+      <div class="footer__links">
+        <a href="https://www.stern-dinkelsbuehl.de" target="_blank" rel="noopener">Der Stern</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <a class="callfab" href="tel:+49XXXXXXXXXX" aria-label="Jetzt anrufen">Anrufen</a>
+  <script src="app.js" defer></script>
 </body>
 </html>
+
