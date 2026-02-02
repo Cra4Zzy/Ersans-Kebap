@@ -1319,6 +1319,89 @@ body{padding-bottom:84px}
 }
 
 
+/* =========================
+   WOCHEN-DEALS (Bild + Text)
+   ========================= */
+.miniFeature{
+  display:grid;
+  grid-template-columns: .95fr 1.05fr;
+  gap:18px;
+  align-items:center;
+}
+
+.miniFeature__media{
+  position:relative;
+  border-radius:var(--radius2);
+  overflow:hidden;
+  border:1px solid rgba(29,20,16,.10);
+  box-shadow:var(--shadow);
+  background:#fff;
+}
+
+.miniFeature__media img{
+  width:100%;
+  height:340px;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+
+.miniFeature__tag{
+  position:absolute;
+  left:14px;
+  bottom:14px;
+  padding:10px 12px;
+  border-radius:999px;
+  background:rgba(15,11,8,.82);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.14);
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  font-size:.72rem;
+}
+
+.dealGrid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap:12px;
+  margin:14px 0 6px;
+}
+
+.dealBox{
+  border:1px solid rgba(29,20,16,.08);
+  background:rgba(255,255,255,.65);
+  border-radius:18px;
+  padding:12px 12px;
+}
+
+.dealBox__top{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:6px;
+}
+
+.dealBox__day{
+  display:inline-flex;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(194,74,44,.12);
+  color:#2b1a14;
+  font-weight:900;
+  font-size:.82rem;
+}
+
+.dealBox__title{
+  font-weight:900;
+}
+
+@media (max-width: 980px){
+  .miniFeature{ grid-template-columns:1fr; }
+  .miniFeature__media img{ height:280px; }
+  .dealGrid{ grid-template-columns:1fr; }
+}
 
 
 
