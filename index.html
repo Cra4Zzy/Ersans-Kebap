@@ -212,8 +212,29 @@
             <span class="muted small">Ersan&rsquo;s Kebap</span>
           </div>
           <div class="widgetBox__body">
-            <div id="trustindex-root" aria-label="Trustindex Google Reviews">
-              <div class="trustindex-widget" data-lazyload="false" data-widget-id="96eb59a62f8b7227e776bff8b32"></div>
+           <!-- Custom Google Reviews Carousel -->
+<div id="reviewsWidget" class="reviewsCarousel" aria-label="Google Bewertungen Carousel">
+  <div class="reviewsTop">
+    <div class="reviewsMeta">
+      <strong style="display:block">Auszug aus Google Bewertungen</strong>
+      <span class="muted small">Ersan&rsquo;s Kebap · Dinkelsbühl</span>
+    </div>
+
+    <div class="reviewsControls" aria-label="Navigation">
+      <button class="rcBtn" type="button" data-reviews-prev aria-label="Vorherige Bewertung">‹</button>
+      <button class="rcBtn" type="button" data-reviews-next aria-label="Nächste Bewertung">›</button>
+    </div>
+  </div>
+
+  <div class="reviewsViewport">
+    <div class="reviewsTrack" data-reviews-track>
+      <!-- Cards werden per JS gerendert -->
+    </div>
+  </div>
+
+  <div class="reviewsDots" data-reviews-dots aria-label="Positionspunkte"></div>
+</div>
+
             </div>
 
             <div class="center" style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap; justify-content:center">
