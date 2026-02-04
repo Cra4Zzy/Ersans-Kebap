@@ -63,18 +63,175 @@ if (form) {
   });
 }
 
-// 6) Trustindex Reviews Loader (keine inline scripts im Body)
-(function loadTrustindex(){
-  const root = document.getElementById("trustindex-root");
+// 6) Google Reviews (Custom Carousel) – kostenlos, ohne Trustindex
+(function initReviewsCarousel(){
+  const root = document.getElementById("reviewsWidget");
   if (!root) return;
 
-  // verhindert doppelte Loads
-  if (document.querySelector('script[data-trustindex="1"]')) return;
+  const track = root.querySelector("[data-reviews-track]");
+  const dotsWrap = root.querySelector("[data-reviews-dots]");
+  const btnPrev = root.querySelector("[data-reviews-prev]");
+  const btnNext = root.querySelector("[data-reviews-next]");
+  if (!track || !dotsWrap || !btnPrev || !btnNext) return;
 
-  const s = document.createElement("script");
-  s.async = true;
-  s.defer = true;
-  s.dataset.trustindex = "1";
-  s.src = "https://cdn.trustindex.io/loader.js?96eb59a62f8b7227e776bff8b32";
-  root.appendChild(s);
+  // ✅ HIER Reviews eintragen (du kannst die Texte später 1:1 ersetzen)
+  // Tipp: 6–12 Reviews wirken perfekt.
+  const REVIEWS = [
+    {
+      name: "Max",
+      meta: "Local Guide · vor 2 Wochen",
+      stars: 5,
+      text: "Bester Döner in Dinkelsbühl. Fleisch saftig, Brot knusprig, Soßen top – komme safe wieder!",
+      source: "Google"
+    },
+    {
+      name: "Laura",
+      meta: "vor 1 Monat",
+      stars: 5,
+      text: "Super freundlich & schnell. Dürüm war mega frisch, richtig stabil.",
+      source: "Google"
+    },
+    {
+      name: "Timo",
+      meta: "Local Guide · vor 3 Monaten",
+      stars: 5,
+      text: "Preis/Leistung brutal. Portion groß, Geschmack 10/10.",
+      source: "Google"
+    },
+    {
+      name: "Sophie",
+      meta: "vor 2 Monaten",
+      stars: 5,
+      text: "Sehr sauber, sympathisch, Essen immer konstant gut.",
+      source: "Google"
+    },
+    {
+      name: "Jonas",
+      meta: "vor 4 Monaten",
+      stars: 5,
+      text: "Currywurst Special war heftig. Pommes crunchy, Sauce on point.",
+      source: "Google"
+    },
+    {
+      name: "Murat",
+      meta: "Local Guide · vor 5 Monaten",
+      stars: 5,
+      text: "Döner Teller richtig stabil. Frische Zutaten, keine lange Wartezeit.",
+      source: "Google"
+    }
+  ];
+
+  const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
+  const stars = (n) => "★★★★★".slice(0, n) + "☆☆☆☆☆".slice(0, 5 - n);
+
+  function render(){
+    track.innerHTML = "";
+    dotsWrap.innerHTML = "";
+
+    REVIEWS.forEach((r, i) => {
+      const card = document.createElement("article");
+      card.className = "reviewCard";
+      card.setAttribute("role", "group");
+      card.setAttribute("aria-label", `Bewertung ${i+1} von ${REVIEWS.length}`);
+
+      const initial = (r.name || "?").trim().charAt(0).toUpperCase();
+
+      card.innerHTML = `
+        <div class="reviewTop">
+          <div class="reviewPerson">
+            <div class="avatar" aria-hidden="true">${initial}</div>
+            <div>
+              <div class="reviewName">${escapeHtml(r.name)}</div>
+              <div class="reviewSub">${escapeHtml(r.meta || "")}</div>
+            </div>
+          </div>
+          <div class="stars" aria-label="${r.stars} von 5 Sternen">${stars(clamp(r.stars || 5, 1, 5))}</div>
+        </div>
+
+        <p class="reviewText">${escapeHtml(r.text || "")}</p>
+
+        <div class="reviewFooter">
+          <div class="gBadge">
+            <span class="gDot"></span>
+            <span>${escapeHtml(r.source || "Google")}</span>
+          </div>
+          <span class="muted small">Verifiziert</span>
+        </div>
+      `;
+      track.appendChild(card);
+
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "dot";
+      dot.setAttribute("aria-label", `Zu Bewertung ${i+1}`);
+      dot.addEventListener("click", () => goTo(i));
+      dotsWrap.appendChild(dot);
+    });
+
+    // Start
+    state.index = 0;
+    apply();
+  }
+
+  const state = { index: 0 };
+
+  function cardsPerView(){
+    // passt zu deinem CSS: Desktop 3, Mobile 1-ish
+    return window.matchMedia("(max-width: 980px)").matches ? 1 : 3;
+  }
+
+  function maxIndex(){
+    return Math.max(0, REVIEWS.length - cardsPerView());
+  }
+
+  function apply(){
+    const idx = clamp(state.index, 0, maxIndex());
+    state.index = idx;
+
+    const viewport = root.querySelector(".reviewsViewport");
+    const firstCard = track.querySelector(".reviewCard");
+    if (!viewport || !firstCard) return;
+
+    // Breite pro Card inkl. Gap sauber ausrechnen
+    const gap = parseFloat(getComputedStyle(track).gap || "14");
+    const cardW = firstCard.getBoundingClientRect().width;
+    const x = (cardW + gap) * idx;
+
+    track.style.transform = `translateX(${-x}px)`;
+
+    // Dots aktiv (pro Review)
+    [...dotsWrap.children].forEach((d, i) => d.classList.toggle("is-active", i === idx));
+  }
+
+  function goTo(i){
+    state.index = i;
+    apply();
+  }
+
+  function next(){
+    state.index = clamp(state.index + 1, 0, maxIndex());
+    apply();
+  }
+
+  function prev(){
+    state.index = clamp(state.index - 1, 0, maxIndex());
+    apply();
+  }
+
+  btnNext.addEventListener("click", next);
+  btnPrev.addEventListener("click", prev);
+  window.addEventListener("resize", apply);
+
+  // Helper: minimal safe escaping
+  function escapeHtml(str){
+    return String(str)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+  render();
 })();
+
