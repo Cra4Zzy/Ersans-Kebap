@@ -74,164 +74,122 @@ if (form) {
   const btnNext = root.querySelector("[data-reviews-next]");
   if (!track || !dotsWrap || !btnPrev || !btnNext) return;
 
-  // ✅ HIER Reviews eintragen (du kannst die Texte später 1:1 ersetzen)
-  // Tipp: 6–12 Reviews wirken perfekt.
-  const REVIEWS = [
+// 6) Custom Reviews Carousel (statt Trustindex)
+(function initReviewsCarousel(){
+  const root = document.getElementById("reviewsWidget");
+  if (!root) return;
+
+  const track = root.querySelector("[data-rc-track]");
+  const dotsWrap = root.querySelector("[data-rc-dots]");
+  const btnPrev = root.querySelector('[data-rc="prev"]');
+  const btnNext = root.querySelector('[data-rc="next"]');
+
+  if (!track || !dotsWrap || !btnPrev || !btnNext) return;
+
+  // ✅ Platzhalter-Reviews (kannst du später 1:1 durch echte Texte ersetzen)
+  const reviews = [
     {
-      name: "Max",
-      meta: "Local Guide · vor 2 Wochen",
+      name: "Nina K.",
+      when: "vor 2 Wochen",
       stars: 5,
-      text: "Bester Döner in Dinkelsbühl. Fleisch saftig, Brot knusprig, Soßen top – komme safe wieder!",
-      source: "Google"
+      text: "Bester Döner in Dinkelsbühl – Fleisch top, Brot frisch und super freundlich. Komme safe wieder!"
     },
     {
-      name: "Laura",
-      meta: "vor 1 Monat",
+      name: "Murat A.",
+      when: "vor 1 Monat",
       stars: 5,
-      text: "Super freundlich & schnell. Dürüm war mega frisch, richtig stabil.",
-      source: "Google"
+      text: "Schnell, sauber, richtig lecker. Döner Teller war brutal gut – Portion stimmt komplett."
     },
     {
-      name: "Timo",
-      meta: "Local Guide · vor 3 Monaten",
-      stars: 5,
-      text: "Preis/Leistung brutal. Portion groß, Geschmack 10/10.",
-      source: "Google"
+      name: "Lukas S.",
+      when: "vor 3 Monaten",
+      stars: 4,
+      text: "Sehr solide! Geschmack passt, Wartezeit okay. Würde ich weiterempfehlen."
     },
     {
-      name: "Sophie",
-      meta: "vor 2 Monaten",
+      name: "Sophie B.",
+      when: "vor 5 Monaten",
       stars: 5,
-      text: "Sehr sauber, sympathisch, Essen immer konstant gut.",
-      source: "Google"
-    },
-    {
-      name: "Jonas",
-      meta: "vor 4 Monaten",
-      stars: 5,
-      text: "Currywurst Special war heftig. Pommes crunchy, Sauce on point.",
-      source: "Google"
-    },
-    {
-      name: "Murat",
-      meta: "Local Guide · vor 5 Monaten",
-      stars: 5,
-      text: "Döner Teller richtig stabil. Frische Zutaten, keine lange Wartezeit.",
-      source: "Google"
+      text: "Mega Service und das Essen immer konstant gut. Für mich die beste Adresse!"
     }
   ];
 
-  const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
-  const stars = (n) => "★★★★★".slice(0, n) + "☆☆☆☆☆".slice(0, 5 - n);
-
-  function render(){
-    track.innerHTML = "";
-    dotsWrap.innerHTML = "";
-
-    REVIEWS.forEach((r, i) => {
-      const card = document.createElement("article");
-      card.className = "reviewCard";
-      card.setAttribute("role", "group");
-      card.setAttribute("aria-label", `Bewertung ${i+1} von ${REVIEWS.length}`);
-
-      const initial = (r.name || "?").trim().charAt(0).toUpperCase();
-
-      card.innerHTML = `
+  // Render Cards
+  track.innerHTML = reviews.map(r => {
+    const initials = (r.name || "?").trim().split(/\s+/).slice(0,2).map(x=>x[0]?.toUpperCase()||"").join("");
+    const stars = "★".repeat(r.stars) + "☆".repeat(Math.max(0, 5 - r.stars));
+    return `
+      <article class="reviewCard">
         <div class="reviewTop">
           <div class="reviewPerson">
-            <div class="avatar" aria-hidden="true">${initial}</div>
+            <div class="avatar" aria-hidden="true">${initials || "★"}</div>
             <div>
-              <div class="reviewName">${escapeHtml(r.name)}</div>
-              <div class="reviewSub">${escapeHtml(r.meta || "")}</div>
+              <div class="reviewName">${r.name}</div>
+              <div class="reviewSub">${r.when}</div>
             </div>
           </div>
-          <div class="stars" aria-label="${r.stars} von 5 Sternen">${stars(clamp(r.stars || 5, 1, 5))}</div>
+          <div class="stars" aria-label="${r.stars} von 5 Sternen">${stars}</div>
         </div>
 
-        <p class="reviewText">${escapeHtml(r.text || "")}</p>
+        <p class="reviewText">${r.text}</p>
 
         <div class="reviewFooter">
-          <div class="gBadge">
-            <span class="gDot"></span>
-            <span>${escapeHtml(r.source || "Google")}</span>
-          </div>
-          <span class="muted small">Verifiziert</span>
+          <span class="gBadge"><span class="gDot"></span> Google</span>
+          <span class="reviewSub">Verifiziert</span>
         </div>
-      `;
-      track.appendChild(card);
+      </article>
+    `;
+  }).join("");
 
-      const dot = document.createElement("button");
-      dot.type = "button";
-      dot.className = "dot";
-      dot.setAttribute("aria-label", `Zu Bewertung ${i+1}`);
-      dot.addEventListener("click", () => goTo(i));
-      dotsWrap.appendChild(dot);
-    });
-
-    // Start
-    state.index = 0;
-    apply();
-  }
-
-  const state = { index: 0 };
+  // Dots
+  let index = 0;
 
   function cardsPerView(){
-    // passt zu deinem CSS: Desktop 3, Mobile 1-ish
+    // wenn Mobile: 1 Card, sonst 3 Cards (passt zu deinem CSS)
     return window.matchMedia("(max-width: 980px)").matches ? 1 : 3;
   }
 
   function maxIndex(){
-    return Math.max(0, REVIEWS.length - cardsPerView());
+    return Math.max(0, reviews.length - cardsPerView());
   }
 
-  function apply(){
-    const idx = clamp(state.index, 0, maxIndex());
-    state.index = idx;
+  function renderDots(){
+    const m = maxIndex();
+    dotsWrap.innerHTML = "";
+    for (let i = 0; i <= m; i++){
+      const d = document.createElement("button");
+      d.type = "button";
+      d.className = "dot" + (i === index ? " is-active" : "");
+      d.setAttribute("aria-label", `Zu Bewertung ${i+1}`);
+      d.addEventListener("click", () => { index = i; update(); });
+      dotsWrap.appendChild(d);
+    }
+  }
 
-    const viewport = root.querySelector(".reviewsViewport");
+  function update(){
+    const m = maxIndex();
+    index = Math.min(Math.max(index, 0), m);
+
+    // Track-Shift: nimmt 1 Card Breite + gap (14px) aus deinem CSS
     const firstCard = track.querySelector(".reviewCard");
-    if (!viewport || !firstCard) return;
+    if (!firstCard) return;
 
-    // Breite pro Card inkl. Gap sauber ausrechnen
-    const gap = parseFloat(getComputedStyle(track).gap || "14");
-    const cardW = firstCard.getBoundingClientRect().width;
-    const x = (cardW + gap) * idx;
+    const gap = 14;
+    const step = firstCard.getBoundingClientRect().width + gap;
+    track.style.transform = `translateX(${-index * step}px)`;
 
-    track.style.transform = `translateX(${-x}px)`;
-
-    // Dots aktiv (pro Review)
-    [...dotsWrap.children].forEach((d, i) => d.classList.toggle("is-active", i === idx));
+    // Dots state
+    [...dotsWrap.children].forEach((el, i) => el.classList.toggle("is-active", i === index));
   }
 
-  function goTo(i){
-    state.index = i;
-    apply();
-  }
+  btnPrev.addEventListener("click", () => { index -= 1; update(); });
+  btnNext.addEventListener("click", () => { index += 1; update(); });
 
-  function next(){
-    state.index = clamp(state.index + 1, 0, maxIndex());
-    apply();
-  }
+  window.addEventListener("resize", () => {
+    renderDots();
+    update();
+  }, { passive: true });
 
-  function prev(){
-    state.index = clamp(state.index - 1, 0, maxIndex());
-    apply();
-  }
-
-  btnNext.addEventListener("click", next);
-  btnPrev.addEventListener("click", prev);
-  window.addEventListener("resize", apply);
-
-  // Helper: minimal safe escaping
-  function escapeHtml(str){
-    return String(str)
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;")
-      .replaceAll('"', "&quot;")
-      .replaceAll("'", "&#039;");
-  }
-
-  render();
+  renderDots();
+  update();
 })();
-
