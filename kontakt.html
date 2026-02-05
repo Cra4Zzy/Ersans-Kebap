@@ -61,29 +61,27 @@
 
         <section class="formCard" data-reveal="up" style="transition-delay:.06s">
           <h2 class="h3">Vorbestellung anfragen</h2>
-      <form id="preorderForm"
+     <form id="preorderForm"
       action="https://formspree.io/f/mbdknvvg"
       method="POST">
 
-  <!-- optional: wohin nach dem Senden -->
-  <input type="hidden" name="_redirect" value="https://ersans-kebap.de/danke.html">
-  <!-- optional: hilft dir später beim Sortieren -->
+  <!-- Redirect nach dem Senden -->
   <input type="hidden" name="page" value="kontakt-vorbestellung">
 
   <div class="fieldGrid">
     <label class="field">
       <span>Vorname & Nachname</span>
-      <input required name="name" type="text" placeholder="Max Mustermann" autocomplete="name">
+      <input required name="name" type="text" placeholder="Max Mustermann">
     </label>
 
     <label class="field">
       <span>E-Mail</span>
-      <input required name="email" type="email" placeholder="max@mail.de" autocomplete="email">
+      <input required name="email" type="email" placeholder="max@mail.de">
     </label>
 
     <label class="field">
       <span>Telefon</span>
-      <input name="phone" type="tel" placeholder="0151 …" autocomplete="tel">
+      <input name="phone" type="tel" placeholder="0151 …">
     </label>
 
     <label class="field">
@@ -94,12 +92,12 @@
     <label class="field field--full">
       <span>Bestellung / Hinweis</span>
       <textarea required name="message" rows="6"
-                placeholder="Was möchtest du bestellen? (z.B. 2x Döner normal, 1x Pizza Salami, ohne Zwiebeln …)"></textarea>
+        placeholder="Was möchtest du bestellen? (z.B. 2x Döner normal, 1x Pizza Salami, ohne Zwiebeln …)"></textarea>
     </label>
   </div>
 
   <button class="btn btn--primary" type="submit">Vorbestellung senden</button>
-  <p class="muted small">Wir melden uns kurz mit Bestätigung. Bitte mindestens 1 Tag vorher bestellen.</p>
+  <p class="muted small">Nach dem Absenden wirst du zur Danke-Seite weitergeleitet.</p>
 </form>
 
         </section>
