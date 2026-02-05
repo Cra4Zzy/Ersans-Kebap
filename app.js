@@ -41,25 +41,18 @@ if (tilt) {
   });
 }
 
-// 5) Preorder form -> prepares a mail (edit ORDER_EMAIL!)
-const ORDER_EMAIL = "deine-email@domain.de"; // <- hier eure Bestell-Mail eintragen
+// ✅ Formspree Submit für Vorbestellung (statt mailto:)
 const form = document.getElementById("preorderForm");
+
 if (form) {
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const fd = new FormData(form);
-    const name = fd.get("name") || "";
-    const email = fd.get("email") || "";
-    const phone = fd.get("phone") || "";
-    const time = fd.get("time") || "";
-    const msg = fd.get("msg") || "";
-
-    const subject = encodeURIComponent(`Vorbestellung: ${name} (${time})`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nE-Mail: ${email}\nTelefon: ${phone}\nAbholzeit: ${time}\n\nBestellung:\n${msg}\n\n— gesendet über ersans-kebap.de`
-    );
-
-    window.location.href = `mailto:${ORDER_EMAIL}?subject=${subject}&body=${body}`;
+  form.addEventListener("submit", () => {
+    // optional: Button während dem Senden deaktivieren (kein Design-Crash)
+    const btn = form.querySelector('button[type="submit"]');
+    if (btn) {
+      btn.disabled = true;
+      btn.dataset.originalText = btn.textContent;
+      btn.textContent = "Wird gesendet …";
+    }
   });
 }
 
