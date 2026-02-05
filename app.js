@@ -69,10 +69,11 @@ if (preorderForm) {
   const root = document.getElementById("reviewsWidget");
   if (!root) return;
 
-  const track = root.querySelector("[data-rc-track]");
-  const dotsWrap = root.querySelector("[data-rc-dots]");
-  const btnPrev = root.querySelector('[data-rc="prev"]');
-  const btnNext = root.querySelector('[data-rc="next"]');
+ const track = root.querySelector("[data-reviews-track]");
+const dotsWrap = root.querySelector("[data-reviews-dots]");
+const btnPrev = root.querySelector("[data-reviews-prev]");
+const btnNext = root.querySelector("[data-reviews-next]");
+
 
   if (!track || !dotsWrap || !btnPrev || !btnNext) return;
 
