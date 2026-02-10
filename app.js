@@ -77,33 +77,64 @@ const btnNext = root.querySelector("[data-reviews-next]");
 
   if (!track || !dotsWrap || !btnPrev || !btnNext) return;
 
-  // ✅ Platzhalter-Reviews (später einfach Texte ersetzen)
+    // ✅ Echte Google-Reviews (Best-of)
   const reviews = [
     {
-      name: "Nina K.",
-      when: "vor 2 Wochen",
+      name: "Y A",
+      when: "vor 4 Monaten",
       stars: 5,
-      text: "Bester Döner in Dinkelsbühl – Fleisch top, Brot frisch und super freundlich. Komme safe wieder!",
+      text: "Einfach der beste Döner in Dinkelsbühl! Qualitativ und geschmacklich gibt es im Umkreis niemand besseren als Ersan's Kebap.",
     },
     {
-      name: "Murat A.",
-      when: "vor 1 Monat",
-      stars: 5,
-      text: "Schnell, sauber, richtig lecker. Döner Teller war brutal gut – Portion stimmt komplett.",
-    },
-    {
-      name: "Lukas S.",
+      name: "Raphael Keller",
       when: "vor 3 Monaten",
-      stars: 4,
-      text: "Sehr solide! Geschmack passt, Wartezeit okay. Würde ich weiterempfehlen.",
+      stars: 5,
+      text: "Super Laden! Döner schmeckt richtig richtig lecker, Ambiente top und der Vibe ist unschlagbar. 10/10.",
     },
     {
-      name: "Sophie B.",
+      name: "Ramazan",
+      when: "vor 3 Monaten",
+      stars: 5,
+      text: "Bester Döner im Umkreis mit einem sehr netten Dönermann.",
+    },
+    {
+      name: "Martin Hochrein",
       when: "vor 5 Monaten",
       stars: 5,
-      text: "Mega Service und das Essen immer konstant gut. Für mich die beste Adresse!",
+      text: "Fladen, Pizzateig und Falafel werden hier selbst gemacht – und das schmeckt man!",
+    },
+    {
+      name: "Krisztina Szász Erdélyi",
+      when: "vor 8 Monaten",
+      stars: 5,
+      text: "Sehr leckeres Essen, große Portionen. Schneller Service. Wir essen gerne hier.",
+    },
+    {
+      name: "Marcus Schneider",
+      when: "vor einem Jahr",
+      stars: 5,
+      text: "Bester Döner und beste Pizza in meinem Leben. Unglaublich gut – komme gerne wieder vorbei!",
+    },
+    {
+      name: "Markus Korn",
+      when: "vor einem Jahr",
+      stars: 5,
+      text: "Die Pizza ist ein Traum: leckerer Teig, dünner knuspriger Rand, reichlich belegt – optisch tippi toppi.",
+    },
+    {
+      name: "Julian Hochstatter",
+      when: "vor einem Jahr",
+      stars: 5,
+      text: "Pide Döner ein Gedicht. Dönerteller mit viel Soße und sehr leckerem Salat. Bedienungen sehr nett – wir kommen wieder.",
+    },
+    {
+      name: "Kritischer Geist!",
+      when: "vor einem Jahr",
+      stars: 5,
+      text: "2× Drehspießteller mit Salat und Pommes gegessen – richtig gut!",
     },
   ];
+
 
   // Render Cards
   track.innerHTML = reviews
