@@ -39,3 +39,7 @@ node tools/test-functions.cjs
 Prüfungen umfassen lokale Links und Anker, Schrift- und Bilddateien, Datenübernahme, Suchbegriffe und Umlaute, Öffnungszeiten inklusive Winterzeit, HTTP-Fehler und die realen Formularzustände mit simulierten Antworten. Kein Test versendet eine echte Kundenanfrage.
 
 Eine visuelle Browserprüfung und ein produktiver E-Mail-Eingangstest waren in dieser Umgebung nicht verfügbar. Die bereits bestehenden Platzhalter für Betreiber-/Register- und Providerangaben in den Rechtstexten müssen weiterhin vom Betreiber vervollständigt werden. Die Überarbeitung ist keine rechtliche Prüfung.
+
+## Lesbarkeit und Speisekarte
+
+Die Schriftgrößen wurden auf deutlich lesbarere Werte angehoben: Fließtexte 16–17 px, Menüpunkte 17–18 px und Preise 18–19 px. Kleine Hilfstexte, Links und Footerinformationen wurden ebenfalls vergrößert und ihre Kontraste verstärkt. Das vorhandene gemeinsame Logo steht nun im dunklen Header. Die Speisekarte verwendet warme Sand-, Karamell- und Espressotöne mit klar getrennten Gerichten und Preisen.

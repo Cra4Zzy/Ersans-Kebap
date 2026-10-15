@@ -51,3 +51,7 @@ Die offizielle Darstellung zeigt, wie eine Döner-Marke eine eigenständige Iden
 ## Grenzen der Prüfung
 
 Links, lokale Assets, Datenübernahme, Suchlogik, Öffnungszeiten, JavaScript und Formularzustände werden automatisiert geprüft. Formulartests verwenden simulierte Antworten und senden keine echten Anfragen. Eine visuelle Prüfung in einem echten Browser sowie der produktive E-Mail-Eingang konnten hier nicht getestet werden. Die bereits vorhandenen Platzhalter im Impressum und in den Providerangaben sind weiterhin vom Betreiber zu vervollständigen; es wurde keine rechtliche Prüfung durchgeführt.
+
+## Nachjustierung nach Kundenfeedback
+
+Der Header zeigt jetzt das vorhandene gemeinsame Logo auf dunklem Grund. Die zuvor sehr kleinen Beschriftungen wurden deutlich angehoben. Der Fokus liegt auf 16–17 px für Fließtexte und 17–19 px für Gerichte und Preise. Die Speisekarte erhielt eine durchgehende warme Sand- und Espresso-Farbwelt. Diese konkreten Korrekturen ersetzen die anfängliche Entscheidung für eine rein typografische Header-Wortmarke und kleine redaktionelle Beschriftungen.

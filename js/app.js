@@ -121,7 +121,7 @@ if (typeof document !== "undefined") {
   window.addEventListener(
     "resize",
     () => {
-      if (window.innerWidth > 900) setMenu(false);
+      if (window.innerWidth > 1100) setMenu(false);
     },
     { passive: true },
   );
