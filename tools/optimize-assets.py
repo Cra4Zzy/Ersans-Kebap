@@ -26,7 +26,7 @@ for old in sorted(OUT.glob('*.webp')):
             size = (width, round(im.height * width / im.width))
             image = im.resize(size, Image.Resampling.LANCZOS)
             filename = name + ('' if width == im.width else '-' + str(width)) + '.webp'
-            image.save(OUT / filename, 'WEBP', quality=74 if name == 'hero-kebap' else 70, method=6)
+            image.save(OUT / filename, 'WEBP', quality=74 if name in {'hero-kebap', 'stern-abend'} else 70, method=6)
             variants.append({'file': filename, 'width': width, 'height': size[1], 'bytes': (OUT / filename).stat().st_size})
         manifest[name] = {'width': im.width, 'height': im.height, 'variants': variants}
 with Image.open(ROOT / 'img/logo-header.png') as im:

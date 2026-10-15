@@ -4079,3 +4079,164 @@ html {
     gap: 14px;
   }
 }
+
+/* Photo-led partner feature: an evening mood that works on small screens. */
+.stern-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.28fr);
+  margin-block: 65px 75px;
+  background: #18362e;
+  color: #fff2d9;
+}
+.stern-feature-photo {
+  position: relative;
+  display: block;
+  min-width: 0;
+  height: auto;
+  min-height: 580px;
+  overflow: hidden;
+  background: #4d3d29;
+}
+.stern-feature-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left 90%;
+  transition: transform 0.6s var(--ease);
+}
+.stern-feature-photo:hover img {
+  transform: scale(1.025);
+}
+.stern-feature-photo::after {
+  content: '';
+  position: absolute;
+  inset: 65% 0 0;
+  background: linear-gradient(transparent, #0c211b99);
+  pointer-events: none;
+}
+
+.stern-photo-arrow {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #f4dfbaaa;
+  background: #18362eaa;
+  font-size: 25px;
+}
+.stern-feature-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 48px 52px;
+}
+.stern-feature-copy > .eyebrow {
+  font-size: 13px;
+  line-height: 1.7;
+  letter-spacing: 0.11em;
+  color: #e9c48b;
+}
+.stern-feature h2 {
+  font-size: clamp(48px, 4.8vw, 65px);
+  line-height: 1.08;
+  margin-top: 25px;
+}
+.stern-feature h2 em {
+  color: #e9c48b;
+}
+.stern-feature-description {
+  max-width: 410px;
+  font-size: 17px;
+  line-height: 1.85;
+  color: #e0e6d7;
+  margin-block: 25px 30px;
+}
+.stern-feature .button {
+  background: #efce97;
+  color: #18362e;
+  border-color: #efce97;
+  font-size: 16px;
+  min-height: 54px;
+}
+.stern-feature .button:hover {
+  background: #f6dfb8;
+  border-color: #f6dfb8;
+}
+.stern-feature-signoff {
+  display: block;
+  margin-top: 34px;
+  padding-top: 19px;
+  width: 100%;
+  border-top: 1px solid #c1b39144;
+  color: #c8d4c2;
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: 0.08em;
+}
+@media (max-width: 1100px) {
+  .stern-feature-copy {
+    padding: 35px 30px;
+  }
+  .stern-feature-photo {
+    min-height: 560px;
+  }
+  .stern-feature h2 {
+    font-size: 51px;
+  }
+}
+@media (max-width: 640px) {
+  .stern-feature {
+    grid-template-columns: minmax(0, 1fr);
+    margin-block: 35px 45px;
+  }
+  .stern-feature-photo {
+    height: auto;
+    aspect-ratio: 1 / 1.12;
+    min-height: 0;
+  }
+  .stern-feature-copy {
+    padding: 29px 24px 27px;
+  }
+  .stern-feature-copy > .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+  .stern-feature h2 {
+    font-size: clamp(38px, 9.7vw, 52px);
+    margin-top: 20px;
+  }
+  .stern-feature-description {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-block: 22px 25px;
+  }
+  .stern-feature .button {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+    padding-inline: 18px;
+    font-size: 15px;
+  }
+  .stern-feature-signoff {
+    margin-top: 27px;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+
+}
+@media (prefers-reduced-motion: reduce) {
+  .stern-feature-photo img {
+    transition: none;
+  }
+  .stern-feature-photo:hover img {
+    transform: none;
+  }
+}

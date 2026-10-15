@@ -290,5 +290,29 @@
   "logo-header": {
     "width": 560,
     "height": 283
+  },
+  "stern-abend": {
+    "width": 1200,
+    "height": 1600,
+    "variants": [
+      {
+        "file": "stern-abend-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 15768
+      },
+      {
+        "file": "stern-abend-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 35688
+      },
+      {
+        "file": "stern-abend.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 48288
+      }
+    ]
   }
 }

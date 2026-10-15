@@ -62,3 +62,11 @@ for width in [768, 1024, 1280]:
     assert computed(menu_css, '.menu-group', width)['grid-template-columns'].count('minmax') == 1
 assert computed(menu_css, '.menu-item', 320)['grid-template-columns'] == 'minmax(0, 1fr) max-content'
 print('PASS: menu CSS cascade at 320–1280px; stacked mobile sections and separate readable price column')
+
+for width in [320, 390, 640]:
+    assert computed(css, ".stern-feature", width)["grid-template-columns"] == "minmax(0, 1fr)"
+    assert computed(css, ".stern-feature .button", width)["width"] == "100%"
+    assert computed(css, ".stern-feature-photo", width)["min-height"] == "0"
+for width in [768, 1024, 1280]:
+    assert computed(css, ".stern-feature", width)["grid-template-columns"] == "minmax(0, 0.92fr) minmax(0, 1.28fr)"
+print("PASS: Stern partner feature stacks on mobile and keeps its full-width call to action")
