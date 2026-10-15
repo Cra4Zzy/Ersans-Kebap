@@ -1,352 +1,382 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Speisekarte · Ersan’s Kebap</title>
-  <meta name="description" content="Speisekarte: Salate, Drehspieß/Döner, Dürüm, Lahmacun, Falafel, Pide, Pizza, Flammkuchen, Calzone & Getränke.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- WICHTIG: styles.css muss im gleichen Ordner liegen wie menu.html -->
-  <link rel="stylesheet" href="../css/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#153d36"><title>Speisekarte & Preise · Ersan’s Kebap</title>
+<meta name="description" content="Die vollständige Speisekarte von Ersan’s Kebap: Döner, Dürüm, Pizza, Falafel, Pide, Currywurst, Salate und Getränke mit Preisen.">
+<meta property="og:title" content="Speisekarte &amp; Preise · Ersan’s Kebap">
+<meta property="og:description" content="Die vollständige Speisekarte von Ersan’s Kebap: Döner, Dürüm, Pizza, Falafel, Pide, Currywurst, Salate und Getränke mit Preisen.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.ersans-kebap.de/img/optimized/hero-kebap.webp">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../fonts/instrument-serif-normal.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="../css/styles.css">
+<script src="../js/app.js" defer>
+</script>
 </head>
-
-<body class="menu-page">
-  <div class="bg bg--light" aria-hidden="true"></div>
-
-  <header class="header header--light" data-sticky>
-    <div class="wrap header__row">
-      <a class="brand" href="../index.html#top" aria-label="Zur Startseite">
-        <span class="brand__logoFrame"><img class="brand__logo" src="../img/logo-header.png" width="1800" height="911" alt="Stern Sport’s Bar und Ersan’s Kebap"></span>
-        <div class="brand__text">
-          <span class="brand__name">Ersan’s Kebap</span>
-          <span class="brand__sub">Speisekarte</span>
-        </div>
-      </a>
-
-      <nav class="nav" data-nav>
-        <a class="nav__link" href="../index.html#top">Start</a>
-        <a class="nav__link is-active" href="menu.html">Speisekarte</a>
-        <a class="nav__link" href="ueber-uns.html">Über uns</a>
-        <a class="nav__link" href="kontakt.html">Kontakt</a>
-        <a class="btn btn--primary nav__cta" href="kontakt.html#vorbestellen">Vorbestellen</a>
-      </nav>
-
-      <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false" data-burger>
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <main class="page">
-    <!-- PAGE HERO -->
-    <section class="pageHero">
-      <div class="wrap pageHero__grid">
-        <div class="pageHero__copy">
-          <p class="kicker">Menü</p>
-          <h1 class="h1">Alles, – frisch & schnell.</h1>
-          <p class="lead">Hier ist die komplette Karte – damit man sofort findet, was man will.</p>
-        </div>
-
-        <div class="pageHero__media">
-          <div class="pageHeroCard">
-            <!-- ✅ MENU HERO BILD (optional)
-                 Standard: menu-hero.jpeg (wenn du eins hast)
-                 Fallback: hero.jpeg -->
-            <img src="../img/doener.jpg" alt="Speisekarte – frisch zubereitete Speisen" loading="eager" onerror="this.onerror=null; this.src='../img/laden-3.jpeg';">
-          </div>
-        </div>
-
-        <div class="pageHero__chip">
-          <strong>Spezialangebot</strong><span class="chipPrice">38,00 €</span>
-          <p class="muted" style="margin:.5rem 0 0">4 Pizzen + 1&nbsp;l Softgetränk</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- MENU -->
-    <section class="section section--paper">
-      <div class="wrap">
-        <div class="menuGrid">
-
-          <!-- APPETIZER / SALATE -->
-          <article class="menuBlock" data-reveal="up">
-            <h2 class="h2">Appetizer</h2>
-
-            <!-- ✅ TOP-SELLER BILD (optional) -->
-            <div class="menuFeatured">
-              <img src="../img/salat.jpg" alt="Top Seller Appetizer" loading="lazy" onerror="this.parentElement.style.display='none'">
-              <div class="menuFeatured__body">
-                <span class="menuFeatured__tag">Top Seller</span>
-                <div class="menuFeatured__title">Gemischter Salat</div>
-                <div class="menuFeatured__note">Frisch & knackig – perfekt als Start.</div>
-              </div>
-            </div>
-
-            <ul class="menuList">
-              <li class="menuRow"><span>Gemischter Salat</span><b>7,00 €</b></li>
-              <li class="menuRow"><span>Bauernsalat mit Weichkäse</span><b>8,50 €</b></li>
-              <li class="menuRow"><span>Thunfischsalat</span><b>8,50 €</b></li>
-              <li class="menuRow"><span>Beilagensalat (nur im Haus)</span><b>3,50 €</b></li>
-              <li class="menuRow"><span>Fingerfood Platte – 4× Nuggets, 4× Chicken Wings, 4× Mozzarella Sticks, Wedges/Süßkartoffel-Pommes oder Pommes, 3 Dips <span class="add">¹⁴</span></span><b>16,50 €</b></li>
-            </ul>
-          </article>
-
-          <!-- NEUE GERICHTE -->
-          <article class="menuBlock" data-reveal="up" style="transition-delay:.06s">
-            <h2 class="h2">⭐ Neue Gerichte</h2>
-
-            <div class="menuFeatured">
-              <img src="../img/doenerteller.jpg" alt="Top Seller Neue Gerichte" loading="lazy">
-              <div class="menuFeatured__body">
-                <span class="menuFeatured__tag">Top Seller</span>
-                <div class="menuFeatured__title">Ersan’s Spezial</div>
-                <div class="menuFeatured__note">Pizzabrot + Knoblauch + Schafskäse – heftig gut.</div>
-              </div>
-            </div>
-
-            <ul class="menuList">
-              <li class="menuRow"><span>Ersan’s Spezial – Pizzabrot mit Knoblauch, Schafskäse, Olivenöl, Drehspießfleisch, Salat on Top <span class="add">⁴⁵¹⁴</span></span><b>15,00 €</b></li>
-              <li class="menuRow"><span>Pizzabrot mit Olivenöl und Knoblauch <span class="add">¹⁴</span></span><b>5,00 €</b></li>
-              <li class="menuRow"><span>Nuggetbox mit Pommes und Salat (6 Stück) <span class="add">¹⁴</span></span><b>8,50 €</b></li>
-            </ul>
-          </article>
-
-          <!-- DREHSPIESS / DOENER -->
-          <article class="menuBlock" data-reveal="up">
-            <h2 class="h2">Drehspieß (Döner)</h2>
-
-            <div class="menuFeatured">
-              <img src="../img/doener.jpg" alt="Top Seller Döner" loading="lazy" onerror="this.parentElement.style.display='none'">
-              <div class="menuFeatured__body">
-                <span class="menuFeatured__tag">Top Seller</span>
-                <div class="menuFeatured__title">Drehspieß normal</div>
-                <div class="menuFeatured__note">Saftig, frisch, mit Sauce deiner Wahl.</div>
-              </div>
-            </div>
-
-            <ul class="menuList">
-              <li class="menuRow"><span>Drehspieß klein mit Salat und Soße <span class="add">⁴⁵¹⁴</span></span><b>5,00 €</b></li>
-              <li class="menuRow"><span>Drehspieß normal mit Salat und Soße <span class="add">⁴⁵¹⁴</span></span><b>7,50 €</b></li>
-              <li class="menuRow"><span>Drehspieß Jumbo mit Salat und Soße <span class="add">⁴⁵¹⁴</span></span><b>13,00 €</b></li>
-              <li class="menuRow"><span>Drehspieß Box groß mit Salat und Soße <span class="add">⁴⁵¹⁴</span></span><b>8,50 €</b></li>
-              <li class="menuRow"><span>Drehspieß‑Teller mit Salat <span class="add">⁴⁵</span></span><b>13,00 €</b></li>
-              <li class="menuRow"><span>Drehspieß‑Teller mit Salat und Reis oder Kartoffeln <span class="add">⁴⁵</span></span><b>13,00 €</b></li>
-              <li class="menuNote"><span class="note">Extras: Extraportion Fleisch 2,00 € · Extraportion Weichkäse 1,00 € · Schale Soße 1,00 €</span></li>
-            </ul>
-          </article>
-
-          <!-- DUERUM / LAHMACUN -->
-          <article class="menuBlock" data-reveal="up" style="transition-delay:.06s">
-            <h2 class="h2">Dürüm & Lahmacun</h2>
-
-            <div class="menuFeatured">
-              <img src="../img/doener.jpg" alt="Top Seller Dürüm" loading="lazy">
-              <div class="menuFeatured__body">
-                <span class="menuFeatured__tag">Top Seller</span>
-                <div class="menuFeatured__title">Dürüm Drehspieß</div>
-                <div class="menuFeatured__note">Gerollt, frisch, perfekt to go.</div>
-              </div>
-            </div>
-
-            <ul class="menuList">
-              <li class="menuRow"><span>Dürüm Drehspieß mit Salat und Soße <span class="add">⁴⁵¹⁴</span></span><b>7,50 €</b></li>
-              <li class="menuRow"><span>Dürüm vegetarisch mit Salat, Soße, Käse <span class="add">¹⁴</span></span><b>7,00 €</b></li>
-              <li class="menuRow"><span>Lahmacun mit Salat und Soße <span class="add">¹⁴</span></span><b>8,00 €</b></li>
-              <li class="menuRow"><span>Lahmacun mit Drehspieß, Salat und Soße <span class="add">⁴⁵¹⁴</span></span><b>9,50 €</b></li>
-            </ul>
-          </article>
-
-          <!-- CURRYWURST / FALAFEL / PIDE -->
-          <article class="menuBlock" data-reveal="up">
-            <h2 class="h2">Currywurst / Falafel / Pide</h2>
-
-            <div class="menuFeatured">
-              <img src="../img/currywurst.jpg" alt="Top Seller Currywurst" loading="lazy" onerror="this.parentElement.style.display='none'">
-              <div class="menuFeatured__body">
-                <span class="menuFeatured__tag">Top Seller</span>
-                <div class="menuFeatured__title">Currywurst mit Pommes</div>
-                <div class="menuFeatured__note">Klassiker, der immer trifft.</div>
-              </div>
-            </div>
-
-            <ul class="menuList">
-              <li class="menuRow"><span>Currywurst mit Pommes</span><b>10,50 €</b></li>
-              <li class="menuRow"><span>Falafel im Fladenbrot mit Salat und Soße <span class="add">⁸¹⁴</span></span><b>7,00 €</b></li>
-              <li class="menuRow"><span>Falafel‑Teller mit Salat <span class="add">⁸¹⁴</span></span><b>12,50 €</b></li>
-              <li class="menuRow"><span>Falafel‑Box <span class="add">⁸¹⁴</span></span><b>7,50 €</b></li>
-              <li class="menuRow"><span>Pide mit Hackfleisch <span class="add">¹⁴</span></span><b>8,50 €</b></li>
-              <li class="menuRow"><span>Pide mit Spinat und Weichkäse <span class="add">¹⁴</span></span><b>9,50 €</b></li>
-            </ul>
-          </article>
-
-          <!-- VEGETARISCH / BEILAGEN -->
-          <article class="menuBlock" data-reveal="up" style="transition-delay:.06s">
-            <h2 class="h2">Vegetarisch & Beilagen</h2>
-
-            <div class="menuFeatured">
-              <img src="../img/currywurst.jpg" alt="Top Seller Beilagen" loading="lazy">
-              <div class="menuFeatured__body">
-                <span class="menuFeatured__tag">Top Seller</span>
-                <div class="menuFeatured__title">Pommes</div>
-                <div class="menuFeatured__note">Knusprig, goldig, passt zu allem.</div>
-              </div>
-            </div>
-
-            <ul class="menuList">
-              <li class="menuRow"><span>Vegetarisches Fladenbrot mit Schafskäse und Salat (klein)</span><b>4,50 €</b></li>
-              <li class="menuRow"><span>Vegetarisches Fladenbrot mit Schafskäse und Salat (normal)</span><b>6,50 €</b></li>
-              <li class="menuRow"><span>Pommes</span><b>4,00 €</b></li>
-              <li class="menuRow"><span>Reis</span><b>4,00 €</b></li>
-              <li class="menuRow"><span>Pide mit Hackfleisch und Weichkäse <span class="add">¹⁴</span></span><b>9,50 €</b></li>
-              <li class="menuRow"><span>Pide mit Drehspieß und Käse <span class="add">⁴⁵¹⁴</span></span><b>10,50 €</b></li>
-              <li class="menuRow"><span>Pide mit Sucuk und Käse <span class="add">²³⁴¹⁴</span></span><b>11,50 €</b></li>
-              <li class="menuRow"><span>Extra Ei</span><b>1,00 €</b></li>
-              <li class="menuRow"><span>Extra Ei und Käse</span><b>1,50 €</b></li>
-            </ul>
-          </article>
-
-          <!-- PIZZEN -->
-          <article class="menuBlock menuBlock--wide" data-reveal="up">
-            <h2 class="h2">Pizzen</h2>
-
-            <div class="menuFeatured menuFeatured--wide">
-              <img src="../img/pizza.jpg" alt="Top Seller Pizza" loading="lazy" onerror="this.parentElement.style.display='none'">
-              <div class="menuFeatured__body">
-                <span class="menuFeatured__tag">Top Seller</span>
-                <div class="menuFeatured__title">Margherita</div>
-                <div class="menuFeatured__note">Einfach, aber perfekt – knusprig & cheesy.</div>
-              </div>
-            </div>
-
-            <ul class="menuList">
-              <li class="menuRow"><span>Margherita <span class="add">¹⁴</span></span><b>8,50 €</b></li>
-              <li class="menuRow"><span>Peperoni <span class="add">¹⁴</span></span><b>9,00 €</b></li>
-              <li class="menuRow"><span>Champignons <span class="add">¹⁴</span></span><b>9,00 €</b></li>
-              <li class="menuRow"><span>Sucuk <span class="add">²³⁴¹⁴</span></span><b>9,50 €</b></li>
-              <li class="menuRow"><span>Salami <span class="add">²³⁵⁸¹⁴</span></span><b>9,50 €</b></li>
-              <li class="menuRow"><span>Schinken <span class="add">²³⁵⁸¹⁴</span></span><b>9,50 €</b></li>
-              <li class="menuRow"><span>Thunfisch mit Zwiebeln <span class="add">¹⁴</span></span><b>10,50 €</b></li>
-              <li class="menuRow"><span>Kebap mit Drehspieß <span class="add">¹⁴</span></span><b>10,00 €</b></li>
-              <li class="menuRow"><span>Hawaii (Schinken & Ananas) <span class="add">⁴⁵¹⁴</span></span><b>10,00 €</b></li>
-              <li class="menuRow"><span>Toscana (Schinken & Pilze) <span class="add">²³⁴⁸¹⁴</span></span><b>10,00 €</b></li>
-              <li class="menuRow"><span>Milanese (Salami & Pilze) <span class="add">²³⁴⁸¹⁴</span></span><b>10,50 €</b></li>
-              <li class="menuRow"><span>Pescatore (Pilze, Peperoni, frische Tomaten) <span class="add">¹⁴</span></span><b>9,50 €</b></li>
-              <li class="menuRow"><span>Frutti di Mare (Meeresfrüchte, Knoblauch) <span class="add">¹⁴</span></span><b>12,50 €</b></li>
-              <li class="menuRow"><span>Tonno (Thunfisch, Pilze, Zwiebeln) <span class="add">⁴⁵¹⁴</span></span><b>11,00 €</b></li>
-              <li class="menuRow"><span>Spezial (Dönerfleisch, Pilze, Zwiebeln) <span class="add">¹⁴</span></span><b>11,50 €</b></li>
-            </ul>
-          </article>
-
-          <!-- FLAMMKUCHEN -->
-          <article class="menuBlock" data-reveal="up">
-            <h2 class="h2">Flammkuchen</h2>
-
-            <div class="menuFeatured">
-              <img src="../img/pizza.jpg" alt="Top Seller Flammkuchen" loading="lazy">
-              <div class="menuFeatured__body">
-                <span class="menuFeatured__tag">Top Seller</span>
-                <div class="menuFeatured__title">Diabolo</div>
-                <div class="menuFeatured__note">Scharfe Salami + Peperoni + Mais.</div>
-              </div>
-            </div>
-
-            <ul class="menuList">
-              <li class="menuRow"><span>Elsässer oder griechische Art</span><b>9,50 €</b></li>
-              <li class="menuRow"><span>Cayan (Dönerfleisch, Salat nach dem Backen) <span class="add">¹⁴</span></span><b>11,00 €</b></li>
-              <li class="menuRow"><span>Diabolo (scharfe Salami, Peperoni, Mais) <span class="add">²³¹⁴</span></span><b>10,00 €</b></li>
-              <li class="menuRow"><span>Vegetarisch (Pilze, Peperoni, Paprika, Oliven, Zwiebeln) <span class="add">¹⁴</span></span><b>10,00 €</b></li>
-              <li class="menuRow"><span>Schinken, Salami <span class="add">²³⁵⁸¹⁴</span></span><b>10,00 €</b></li>
-              <li class="menuNote"><span class="note">Jede weitere Zutat: 0,50 €</span></li>
-            </ul>
-          </article>
-
-          <!-- CALZONE -->
-          <article class="menuBlock" data-reveal="up" style="transition-delay:.06s">
-            <h2 class="h2">Calzone</h2>
-
-            <div class="menuFeatured">
-              <img src="../img/pizza.jpg" alt="Top Seller Calzone" loading="lazy">
-              <div class="menuFeatured__body">
-                <span class="menuFeatured__tag">Top Seller</span>
-                <div class="menuFeatured__title">Calzone Spezial</div>
-                <div class="menuFeatured__note">Drehspieß, Pilze, Zwiebeln, Paprika.</div>
-              </div>
-            </div>
-
-            <ul class="menuList">
-              <li class="menuRow"><span>Calzone Drehspieß (mit Zwiebeln) <span class="add">⁴⁵¹⁴</span></span><b>11,50 €</b></li>
-              <li class="menuRow"><span>Calzone Dinkelsbühl (Schinken, Salami, Peperoni) <span class="add">⁴⁵¹⁴</span></span><b>11,50 €</b></li>
-              <li class="menuRow"><span>Calzone Sucuk <span class="add">²³⁴¹⁴</span></span><b>10,50 €</b></li>
-              <li class="menuRow"><span>Calzone Spezial (Drehspieß, Pilze, Zwiebeln, Paprika) <span class="add">⁴⁵¹⁴</span></span><b>12,50 €</b></li>
-            </ul>
-          </article>
-
-          <!-- GETRAENKE -->
-          <article class="menuBlock" data-reveal="up">
-            <h2 class="h2">Getränke</h2>
-
-            <div class="menuFeatured">
-              <img src="../img/cola.jpg" alt="Top Seller Getränke" loading="lazy" onerror="this.parentElement.style.display='none'">
-              <div class="menuFeatured__body">
-                <span class="menuFeatured__tag">Top Seller</span>
-                <div class="menuFeatured__title">Softgetränke</div>
-                <div class="menuFeatured__note">Kalt & frisch – passt zu allem.</div>
-              </div>
-            </div>
-
-            <ul class="menuList">
-              <li class="menuRow"><span>Ayran 0,25 l</span><b>1,50 €</b></li>
-              <li class="menuRow"><span>Softgetränke</span><b>3,00 €</b></li>
-              <li class="menuRow"><span>Eistee</span><b>2,50 €</b></li>
-              <li class="menuRow"><span>Bier</span><b>3,50 €</b></li>
-              <li class="menuRow"><span>Radler</span><b>3,50 €</b></li>
-              <li class="menuRow"><span>Radler alkoholfrei</span><b>3,50 €</b></li>
-            </ul>
-          </article>
-
-          <!-- SPECIAL -->
-          <article class="menuBlock" data-reveal="up" style="transition-delay:.06s">
-            <h2 class="h2">Spezialangebot</h2>
-            <ul class="menuList">
-              <li class="menuRow"><span>4 Pizzen + 1 l Softgetränk</span><b>38,00 €</b></li>
-            </ul>
-            <div class="menuCta">
-              <a class="btn btn--primary" href="kontakt.html#vorbestellen">Vorbestellen</a>
-              <a class="btn btn--ghost" href="../index.html#standort">Standort</a>
-            </div>
-          </article>
-
-          <!-- ZUSATZSTOFFE -->
-          <article class="menuBlock menuBlock--wide" data-reveal="up">
-            <h2 class="h2">ℹ️ Zusatzstoffe (Kurz)</h2>
-            <p class="muted" style="margin:0; line-height:1.65">
-              1 Farbstoffe · 2 Konservierungsstoffe · 3 Antioxidationsmittel · 4 Geschmacksverstärker · 5 Phosphat · 6 geschwärzt · 8 Nitritpökelsalz · 12 koffeinhaltig · 13 taurinhaltig · 14 Gluten · 15 Sulfite · 16 Gerstenmehl · 17 Weizenmehl
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer footer--light">
-    <div class="wrap footer__row">
-      <div>
-        <strong>Ersan’s Kebap</strong>
-        <div class="muted small">© <span data-year></span></div>
-      </div>
-      <div class="footer__links">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </div>
-    </div>
-  </footer>
-
-  <a class="callfab" href="tel:+4915159078248" aria-label="Jetzt anrufen">Anrufen</a>
-  <script src="../js/app.js" defer></script>
+<body id="top" class="menu "><a class="skip" href="#main">Zum Inhalt springen</a>
+<div class="utility"><span>DÖNER. PIZZA. GUTE ZEIT.</span><span>Di–So 12–14 & 17–21 Uhr <i></i> Montag Ruhetag</span>
+</div>
+<header class="site-header" data-header>
+<div class="header-inner shell"><a class="brand" href="../index.html" aria-label="Ersan’s Kebap – Startseite"><span class="wordmark">ersan’s<span class="brand-dot">.</span></span><span class="brand-sub">KEBAP · DINKELSBÜHL</span></a>
+<nav class="main-nav" id="main-nav" aria-label="Hauptnavigation"><a href="../html/menu.html" aria-current="page">Speisekarte</a><a href="../html/ueber-uns.html" >Unsere Geschichte</a><a href="../html/kontakt.html" >Kontakt & Anfahrt</a><a class="mobile-order" href="../html/kontakt.html#vorbestellen">Vorbestellen <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+</nav>
+<div class="header-actions"><a class="header-order" href="../html/kontakt.html#vorbestellen">Vorbestellen <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+</div>
+</div>
+</header>
+<main id="main">
+<section class="page-intro shell">
+<div>
+<p class="eyebrow">DIE SPEISEKARTE.
+</p>
+<h1>Dein Hunger.<br><em>Unsere Antwort.</em>
+</h1>
+</div>
+<div class="intro-aside">
+<p>Von Döner bis Pizza, von Falafel bis Currywurst.<br>Finde dein nächstes Lieblingsgericht.
+</p><a class="under-link" href="../html/kontakt.html#vorbestellen">Vorbestellung anfragen ↗</a>
+</div>
+</section>
+<section class="menu-section shell">
+<div class="menu-search-bar">
+<label class="menu-search"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 5 5"/></svg>
+<input type="search" id="menu-search" placeholder="Worauf hast du Hunger?" aria-label="Speisekarte durchsuchen">
+</label><span id="menu-result-count" role="status">64 Gerichte & Getränke</span>
+</div>
+<div class="menu-layout">
+<aside class="menu-sidebar"><span class="mini-label">UNSERE AUSWAHL</span>
+<div class="menu-filters" role="group" aria-label="Speisekarte nach Kategorie filtern"><button type="button" data-menu-filter="alle" aria-pressed="true">Alles entdecken<span>↗</span></button><button type="button" data-menu-filter="doener" aria-pressed="false">Döner & Dürüm<span>↗</span></button><button type="button" data-menu-filter="pizza" aria-pressed="false">Pizza & Ofen<span>↗</span></button><button type="button" data-menu-filter="klassiker" aria-pressed="false">Currywurst & mehr<span>↗</span></button><button type="button" data-menu-filter="vegetarisch" aria-pressed="false">Pide & Beilagen<span>↗</span></button><button type="button" data-menu-filter="salate" aria-pressed="false">Salate & Snacks<span>↗</span></button><button type="button" data-menu-filter="spezial" aria-pressed="false">Spezial & Angebote<span>↗</span></button><button type="button" data-menu-filter="getraenke" aria-pressed="false">Getränke<span>↗</span></button>
+</div>
+<div class="menu-help"><span class="mini-label">GUT ZU WISSEN</span>
+<p>Fragen zu Zutaten oder Allergenen? Sprich uns bitte vor der Bestellung an.
+</p><a class="under-link" href="tel:+4915159078248">Kurz nachfragen ↗</a>
+</div>
+</aside>
+<div class="menu-content">
+<section class="menu-group" id="salate" data-menu-group="salate">
+<div class="menu-group-heading"><span class="menu-group-index">01</span>
+<div>
+<h2>Appetizer
+</h2>
+<p>Frisch anfangen. Oder einfach leicht bleiben.
+</p>
+</div>
+</div>
+<ul class="menu-items">
+<li class="menu-item" data-menu-item data-search="Gemischter Salat"><span class="menu-item-name">Gemischter Salat</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">7,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Bauernsalat mit Weichkäse"><span class="menu-item-name">Bauernsalat mit Weichkäse</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">8,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Thunfischsalat"><span class="menu-item-name">Thunfischsalat</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">8,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Beilagensalat (nur im Haus)"><span class="menu-item-name">Beilagensalat (nur im Haus)</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">3,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Fingerfood Platte – 4× Nuggets, 4× Chicken Wings, 4× Mozzarella Sticks, Wedges/Süßkartoffel-Pommes oder Pommes, 3 Dips"><span class="menu-item-name">Fingerfood Platte – 4× Nuggets, 4× Chicken Wings, 4× Mozzarella Sticks, Wedges/Süßkartoffel-Pommes oder Pommes, 3 Dips<sup title="Kennzeichnungen aus der Speisekarte">¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">16,50 €</span>
+</li>
+</ul>
+</section>
+<section class="menu-group" id="spezial" data-menu-group="spezial">
+<div class="menu-group-heading"><span class="menu-group-index">02</span>
+<div>
+<h2>Neue Gerichte
+</h2>
+<p>Für alle, die etwas Besonderes suchen.
+</p>
+</div>
+</div>
+<ul class="menu-items">
+<li class="menu-item" data-menu-item data-search="Ersan’s Spezial – Pizzabrot mit Knoblauch, Schafskäse, Olivenöl, Drehspießfleisch, Salat on Top"><span class="menu-item-name">Ersan’s Spezial – Pizzabrot mit Knoblauch, Schafskäse, Olivenöl, Drehspießfleisch, Salat on Top<sup title="Kennzeichnungen aus der Speisekarte">⁴⁵¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">15,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Pizzabrot mit Olivenöl und Knoblauch"><span class="menu-item-name">Pizzabrot mit Olivenöl und Knoblauch<sup title="Kennzeichnungen aus der Speisekarte">¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">5,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Nuggetbox mit Pommes und Salat (6 Stück)"><span class="menu-item-name">Nuggetbox mit Pommes und Salat (6 Stück)<sup title="Kennzeichnungen aus der Speisekarte">¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">8,50 €</span>
+</li>
+</ul>
+</section>
+<section class="menu-group" id="doener" data-menu-group="doener">
+<div class="menu-group-heading"><span class="menu-group-index">03</span>
+<div>
+<h2>Drehspieß (Döner)
+</h2>
+<p>Mit Salat, Soße und deinem guten Geschmack.
+</p>
+</div>
+</div>
+<ul class="menu-items">
+<li class="menu-item" data-menu-item data-search="Drehspieß klein mit Salat und Soße"><span class="menu-item-name">Drehspieß klein mit Salat und Soße<sup title="Kennzeichnungen aus der Speisekarte">⁴⁵¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">5,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Drehspieß normal mit Salat und Soße"><span class="menu-item-name">Drehspieß normal mit Salat und Soße<sup title="Kennzeichnungen aus der Speisekarte">⁴⁵¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">7,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Drehspieß Jumbo mit Salat und Soße"><span class="menu-item-name">Drehspieß Jumbo mit Salat und Soße<sup title="Kennzeichnungen aus der Speisekarte">⁴⁵¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">13,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Drehspieß Box groß mit Salat und Soße"><span class="menu-item-name">Drehspieß Box groß mit Salat und Soße<sup title="Kennzeichnungen aus der Speisekarte">⁴⁵¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">8,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Drehspieß‑Teller mit Salat"><span class="menu-item-name">Drehspieß‑Teller mit Salat<sup title="Kennzeichnungen aus der Speisekarte">⁴⁵</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">13,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Drehspieß‑Teller mit Salat und Reis oder Kartoffeln"><span class="menu-item-name">Drehspieß‑Teller mit Salat und Reis oder Kartoffeln<sup title="Kennzeichnungen aus der Speisekarte">⁴⁵</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">13,00 €</span>
+</li>
+</ul>
+<p class="menu-group-note">Extras: Extraportion Fleisch 2,00 € · Extraportion Weichkäse 1,00 € · Schale Soße 1,00 €
+</p>
+</section>
+<section class="menu-group" id="dueruem" data-menu-group="doener">
+<div class="menu-group-heading"><span class="menu-group-index">04</span>
+<div>
+<h2>Dürüm &amp; Lahmacun
+</h2>
+<p>Gerollt oder als Lahmacun – frisch für dich.
+</p>
+</div>
+</div>
+<ul class="menu-items">
+<li class="menu-item" data-menu-item data-search="Dürüm Drehspieß mit Salat und Soße"><span class="menu-item-name">Dürüm Drehspieß mit Salat und Soße<sup title="Kennzeichnungen aus der Speisekarte">⁴⁵¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">7,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Dürüm vegetarisch mit Salat, Soße, Käse"><span class="menu-item-name">Dürüm vegetarisch mit Salat, Soße, Käse<sup title="Kennzeichnungen aus der Speisekarte">¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">7,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Lahmacun mit Salat und Soße"><span class="menu-item-name">Lahmacun mit Salat und Soße<sup title="Kennzeichnungen aus der Speisekarte">¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">8,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Lahmacun mit Drehspieß, Salat und Soße"><span class="menu-item-name">Lahmacun mit Drehspieß, Salat und Soße<sup title="Kennzeichnungen aus der Speisekarte">⁴⁵¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">9,50 €</span>
+</li>
+</ul>
+</section>
+<section class="menu-group" id="klassiker" data-menu-group="klassiker">
+<div class="menu-group-heading"><span class="menu-group-index">05</span>
+<div>
+<h2>Currywurst / Falafel / Pide
+</h2>
+<p>Unsere Klassiker auf dem Teller und im Brot.
+</p>
+</div>
+</div>
+<ul class="menu-items">
+<li class="menu-item" data-menu-item data-search="Currywurst mit Pommes"><span class="menu-item-name">Currywurst mit Pommes</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">10,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Falafel im Fladenbrot mit Salat und Soße"><span class="menu-item-name">Falafel im Fladenbrot mit Salat und Soße<sup title="Kennzeichnungen aus der Speisekarte">⁸¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">7,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Falafel‑Teller mit Salat"><span class="menu-item-name">Falafel‑Teller mit Salat<sup title="Kennzeichnungen aus der Speisekarte">⁸¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">12,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Falafel‑Box"><span class="menu-item-name">Falafel‑Box<sup title="Kennzeichnungen aus der Speisekarte">⁸¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">7,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Pide mit Hackfleisch"><span class="menu-item-name">Pide mit Hackfleisch<sup title="Kennzeichnungen aus der Speisekarte">¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">8,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Pide mit Spinat und Weichkäse"><span class="menu-item-name">Pide mit Spinat und Weichkäse<sup title="Kennzeichnungen aus der Speisekarte">¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">9,50 €</span>
+</li>
+</ul>
+</section>
+<section class="menu-group" id="vegetarisch" data-menu-group="vegetarisch">
+<div class="menu-group-heading"><span class="menu-group-index">06</span>
+<div>
+<h2>Pide, Fladenbrot &amp; Beilagen
+</h2>
+<p>Pide, Fladenbrot und passende Beilagen.
+</p>
+</div>
+</div>
+<ul class="menu-items">
+<li class="menu-item" data-menu-item data-search="Vegetarisches Fladenbrot mit Schafskäse und Salat (klein)"><span class="menu-item-name">Vegetarisches Fladenbrot mit Schafskäse und Salat (klein)</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">4,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Vegetarisches Fladenbrot mit Schafskäse und Salat (normal)"><span class="menu-item-name">Vegetarisches Fladenbrot mit Schafskäse und Salat (normal)</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">6,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Pommes"><span class="menu-item-name">Pommes</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">4,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Reis"><span class="menu-item-name">Reis</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">4,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Pide mit Hackfleisch und Weichkäse"><span class="menu-item-name">Pide mit Hackfleisch und Weichkäse<sup title="Kennzeichnungen aus der Speisekarte">¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">9,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Pide mit Drehspieß und Käse"><span class="menu-item-name">Pide mit Drehspieß und Käse<sup title="Kennzeichnungen aus der Speisekarte">⁴⁵¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">10,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Pide mit Sucuk und Käse"><span class="menu-item-name">Pide mit Sucuk und Käse<sup title="Kennzeichnungen aus der Speisekarte">²³⁴¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">11,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Extra Ei"><span class="menu-item-name">Extra Ei</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">1,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Extra Ei und Käse"><span class="menu-item-name">Extra Ei und Käse</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">1,50 €</span>
+</li>
+</ul>
+</section>
+<section class="menu-group" id="pizza" data-menu-group="pizza">
+<div class="menu-group-heading"><span class="menu-group-index">07</span>
+<div>
+<h2>Pizzen
+</h2>
+<p>Frisch aus dem Ofen. Mit deinem Lieblingsbelag.
+</p>
+</div>
+</div>
+<ul class="menu-items">
+<li class="menu-item" data-menu-item data-search="Margherita"><span class="menu-item-name">Margherita<sup title="Kennzeichnungen aus der Speisekarte">¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">8,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Peperoni"><span class="menu-item-name">Peperoni<sup title="Kennzeichnungen aus der Speisekarte">¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">9,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Champignons"><span class="menu-item-name">Champignons<sup title="Kennzeichnungen aus der Speisekarte">¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">9,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Sucuk"><span class="menu-item-name">Sucuk<sup title="Kennzeichnungen aus der Speisekarte">²³⁴¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">9,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Salami"><span class="menu-item-name">Salami<sup title="Kennzeichnungen aus der Speisekarte">²³⁵⁸¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">9,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Schinken"><span class="menu-item-name">Schinken<sup title="Kennzeichnungen aus der Speisekarte">²³⁵⁸¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">9,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Thunfisch mit Zwiebeln"><span class="menu-item-name">Thunfisch mit Zwiebeln<sup title="Kennzeichnungen aus der Speisekarte">¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">10,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Kebap mit Drehspieß"><span class="menu-item-name">Kebap mit Drehspieß<sup title="Kennzeichnungen aus der Speisekarte">¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">10,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Hawaii (Schinken &amp; Ananas)"><span class="menu-item-name">Hawaii (Schinken &amp; Ananas)<sup title="Kennzeichnungen aus der Speisekarte">⁴⁵¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">10,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Toscana (Schinken &amp; Pilze)"><span class="menu-item-name">Toscana (Schinken &amp; Pilze)<sup title="Kennzeichnungen aus der Speisekarte">²³⁴⁸¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">10,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Milanese (Salami &amp; Pilze)"><span class="menu-item-name">Milanese (Salami &amp; Pilze)<sup title="Kennzeichnungen aus der Speisekarte">²³⁴⁸¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">10,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Pescatore (Pilze, Peperoni, frische Tomaten)"><span class="menu-item-name">Pescatore (Pilze, Peperoni, frische Tomaten)<sup title="Kennzeichnungen aus der Speisekarte">¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">9,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Frutti di Mare (Meeresfrüchte, Knoblauch)"><span class="menu-item-name">Frutti di Mare (Meeresfrüchte, Knoblauch)<sup title="Kennzeichnungen aus der Speisekarte">¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">12,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Tonno (Thunfisch, Pilze, Zwiebeln)"><span class="menu-item-name">Tonno (Thunfisch, Pilze, Zwiebeln)<sup title="Kennzeichnungen aus der Speisekarte">⁴⁵¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">11,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Spezial (Dönerfleisch, Pilze, Zwiebeln)"><span class="menu-item-name">Spezial (Dönerfleisch, Pilze, Zwiebeln)<sup title="Kennzeichnungen aus der Speisekarte">¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">11,50 €</span>
+</li>
+</ul>
+</section>
+<section class="menu-group" id="flammkuchen" data-menu-group="pizza">
+<div class="menu-group-heading"><span class="menu-group-index">08</span>
+<div>
+<h2>Flammkuchen
+</h2>
+<p>Knusprig dünn und herzhaft belegt.
+</p>
+</div>
+</div>
+<ul class="menu-items">
+<li class="menu-item" data-menu-item data-search="Elsässer oder griechische Art"><span class="menu-item-name">Elsässer oder griechische Art</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">9,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Cayan (Dönerfleisch, Salat nach dem Backen)"><span class="menu-item-name">Cayan (Dönerfleisch, Salat nach dem Backen)<sup title="Kennzeichnungen aus der Speisekarte">¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">11,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Diabolo (scharfe Salami, Peperoni, Mais)"><span class="menu-item-name">Diabolo (scharfe Salami, Peperoni, Mais)<sup title="Kennzeichnungen aus der Speisekarte">²³¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">10,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Vegetarisch (Pilze, Peperoni, Paprika, Oliven, Zwiebeln)"><span class="menu-item-name">Vegetarisch (Pilze, Peperoni, Paprika, Oliven, Zwiebeln)<sup title="Kennzeichnungen aus der Speisekarte">¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">10,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Schinken, Salami"><span class="menu-item-name">Schinken, Salami<sup title="Kennzeichnungen aus der Speisekarte">²³⁵⁸¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">10,00 €</span>
+</li>
+</ul>
+<p class="menu-group-note">Jede weitere Zutat: 0,50 €
+</p>
+</section>
+<section class="menu-group" id="calzone" data-menu-group="pizza">
+<div class="menu-group-heading"><span class="menu-group-index">09</span>
+<div>
+<h2>Calzone
+</h2>
+<p>Gut gefüllt. Heiß aus dem Ofen.
+</p>
+</div>
+</div>
+<ul class="menu-items">
+<li class="menu-item" data-menu-item data-search="Calzone Drehspieß (mit Zwiebeln)"><span class="menu-item-name">Calzone Drehspieß (mit Zwiebeln)<sup title="Kennzeichnungen aus der Speisekarte">⁴⁵¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">11,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Calzone Dinkelsbühl (Schinken, Salami, Peperoni)"><span class="menu-item-name">Calzone Dinkelsbühl (Schinken, Salami, Peperoni)<sup title="Kennzeichnungen aus der Speisekarte">⁴⁵¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">11,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Calzone Sucuk"><span class="menu-item-name">Calzone Sucuk<sup title="Kennzeichnungen aus der Speisekarte">²³⁴¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">10,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Calzone Spezial (Drehspieß, Pilze, Zwiebeln, Paprika)"><span class="menu-item-name">Calzone Spezial (Drehspieß, Pilze, Zwiebeln, Paprika)<sup title="Kennzeichnungen aus der Speisekarte">⁴⁵¹⁴</sup></span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">12,50 €</span>
+</li>
+</ul>
+</section>
+<section class="menu-group" id="getraenke" data-menu-group="getraenke">
+<div class="menu-group-heading"><span class="menu-group-index">10</span>
+<div>
+<h2>Getränke
+</h2>
+<p>Etwas Kühles dazu?
+</p>
+</div>
+</div>
+<ul class="menu-items">
+<li class="menu-item" data-menu-item data-search="Ayran 0,25 l"><span class="menu-item-name">Ayran 0,25 l</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">1,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Softgetränke"><span class="menu-item-name">Softgetränke</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">3,00 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Eistee"><span class="menu-item-name">Eistee</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">2,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Bier"><span class="menu-item-name">Bier</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">3,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Radler"><span class="menu-item-name">Radler</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">3,50 €</span>
+</li>
+<li class="menu-item" data-menu-item data-search="Radler alkoholfrei"><span class="menu-item-name">Radler alkoholfrei</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">3,50 €</span>
+</li>
+</ul>
+</section>
+<section class="menu-group" id="angebote" data-menu-group="spezial">
+<div class="menu-group-heading"><span class="menu-group-index">11</span>
+<div>
+<h2>Spezialangebot
+</h2>
+<p>Gut zusammen. Gemeinsam genießen.
+</p>
+</div>
+</div>
+<ul class="menu-items">
+<li class="menu-item" data-menu-item data-search="4 Pizzen + 1 l Softgetränk"><span class="menu-item-name">4 Pizzen + 1 l Softgetränk</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-item-price">38,00 €</span>
+</li>
+</ul>
+</section>
+<div class="menu-empty" hidden>
+<h2>Noch nicht fündig?
+</h2>
+<p>Versuch einen anderen Suchbegriff oder zeig dir wieder die ganze Karte an.
+</p><button type="button" class="button button--primary" data-reset-menu>Alles anzeigen <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+</div>
+<div class="menu-additives">
+<details>
+<summary>Zusatzstoffe & Kennzeichnungen
+</summary>
+<p>1 Farbstoffe · 2 Konservierungsstoffe · 3 Antioxidationsmittel · 4 Geschmacksverstärker · 5 Phosphat · 6 geschwärzt · 8 Nitritpökelsalz · 12 koffeinhaltig · 13 taurinhaltig · 14 Gluten · 15 Sulfite · 16 Gerstenmehl · 17 Weizenmehl
+</p>
+<p>Die Kennzeichnungen wurden aus unserer bisherigen Speisekarte übernommen. Bitte frage bei Unverträglichkeiten vor der Bestellung persönlich nach.
+</p>
+</details>
+</div>
+</div>
+</div>
+</section>
+<section class="order-band">
+<div class="shell">
+<h2>Schon entschieden?
+</h2>
+<p>Ruf kurz an oder frage deine Vorbestellung<br>mit mindestens einem Tag Vorlauf an.
+</p><a class="button button--light" href="../html/kontakt.html#vorbestellen" ><span>Kontakt & Vorbestellung</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="shell footer-call">
+<div>
+<p class="eyebrow">DEIN NÄCHSTER GUTER BISS.
+</p>
+<h2>Wir sehen uns<br><em>bei Ersan’s.</em>
+</h2>
+</div>
+<div><a class="footer-phone" href="tel:+4915159078248">0151 590 78 248 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+<p>Für den schnellen Hunger am besten anrufen.<br>Vorbestellungen per Formular bitte einen Tag vorher.
+</p>
+</div>
+</div>
+<div class="shell footer-info"><a class="brand" href="../index.html" aria-label="Zur Startseite"><span class="wordmark">ersan’s<span class="brand-dot">.</span></span><span class="brand-sub">KEBAP · DINKELSBÜHL</span></a>
+<div><span class="eyebrow">ZU BESUCH</span><address>Dr.-Martin-Luther-Straße 18<br>91550 Dinkelsbühl</address><a class="under-link" href="https://www.google.com/maps/search/?api=1&query=Dr.-Martin-Luther-Stra%C3%9Fe+18+91550+Dinkelsb%C3%BChl" target="_blank" rel="noopener">Route öffnen ↗</a>
+</div>
+<div><span class="eyebrow">ZU DEINER ZEIT</span>
+<p>Dienstag bis Sonntag<br>12:00–14:00 & 17:00–21:00 Uhr<br>Montag Ruhetag
+</p>
+</div>
+<div><span class="eyebrow">NOCH EIN DRINK?</span><a href="https://www.xn--stern-dinkelsbhl-wzb.de/" class="stern-link" target="_blank" rel="noopener"><img src="../img/logo-header.png" width="1800" height="911" alt="Stern Sports Bar und Ersan’s Kebap" loading="lazy"><span>Unser Partner: Der Stern ↗</span></a>
+</div>
+</div>
+<div class="shell footer-bottom"><span>© <span data-year>2026</span> Ersan’s Kebap · Dinkelsbühl</span><span class="footer-legal"><a href="../html/impressum.html">Impressum</a><a href="../html/datenschutz.html">Datenschutz</a><a href="#top">Nach oben ↑</a></span>
+</div>
+<div class="shell image-note">Food-Motive teilweise illustrativ. Echte Einblicke in unseren Laden findest du unter „Unsere Geschichte“.
+</div>
+</footer>
+<div class="mobile-quick" aria-label="Schnellzugriff"><a href="../html/menu.html">Speisekarte</a><a href="tel:+4915159078248">Anrufen <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+</div>
 </body>
 </html>

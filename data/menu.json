@@ -1,0 +1,414 @@
+[
+  {
+    "name": "Appetizer",
+    "items": [
+      {
+        "name": "Gemischter Salat",
+        "price": "7,00 €",
+        "additives": ""
+      },
+      {
+        "name": "Bauernsalat mit Weichkäse",
+        "price": "8,50 €",
+        "additives": ""
+      },
+      {
+        "name": "Thunfischsalat",
+        "price": "8,50 €",
+        "additives": ""
+      },
+      {
+        "name": "Beilagensalat (nur im Haus)",
+        "price": "3,50 €",
+        "additives": ""
+      },
+      {
+        "name": "Fingerfood Platte – 4× Nuggets, 4× Chicken Wings, 4× Mozzarella Sticks, Wedges/Süßkartoffel-Pommes oder Pommes, 3 Dips",
+        "price": "16,50 €",
+        "additives": "¹⁴"
+      }
+    ],
+    "notes": [],
+    "id": "salate",
+    "filter": "salate"
+  },
+  {
+    "name": "Neue Gerichte",
+    "items": [
+      {
+        "name": "Ersan’s Spezial – Pizzabrot mit Knoblauch, Schafskäse, Olivenöl, Drehspießfleisch, Salat on Top",
+        "price": "15,00 €",
+        "additives": "⁴⁵¹⁴"
+      },
+      {
+        "name": "Pizzabrot mit Olivenöl und Knoblauch",
+        "price": "5,00 €",
+        "additives": "¹⁴"
+      },
+      {
+        "name": "Nuggetbox mit Pommes und Salat (6 Stück)",
+        "price": "8,50 €",
+        "additives": "¹⁴"
+      }
+    ],
+    "notes": [],
+    "id": "spezial",
+    "filter": "spezial"
+  },
+  {
+    "name": "Drehspieß (Döner)",
+    "items": [
+      {
+        "name": "Drehspieß klein mit Salat und Soße",
+        "price": "5,00 €",
+        "additives": "⁴⁵¹⁴"
+      },
+      {
+        "name": "Drehspieß normal mit Salat und Soße",
+        "price": "7,50 €",
+        "additives": "⁴⁵¹⁴"
+      },
+      {
+        "name": "Drehspieß Jumbo mit Salat und Soße",
+        "price": "13,00 €",
+        "additives": "⁴⁵¹⁴"
+      },
+      {
+        "name": "Drehspieß Box groß mit Salat und Soße",
+        "price": "8,50 €",
+        "additives": "⁴⁵¹⁴"
+      },
+      {
+        "name": "Drehspieß‑Teller mit Salat",
+        "price": "13,00 €",
+        "additives": "⁴⁵"
+      },
+      {
+        "name": "Drehspieß‑Teller mit Salat und Reis oder Kartoffeln",
+        "price": "13,00 €",
+        "additives": "⁴⁵"
+      }
+    ],
+    "notes": [
+      "Extras: Extraportion Fleisch 2,00 € · Extraportion Weichkäse 1,00 € · Schale Soße 1,00 €"
+    ],
+    "id": "doener",
+    "filter": "doener"
+  },
+  {
+    "name": "Dürüm & Lahmacun",
+    "items": [
+      {
+        "name": "Dürüm Drehspieß mit Salat und Soße",
+        "price": "7,50 €",
+        "additives": "⁴⁵¹⁴"
+      },
+      {
+        "name": "Dürüm vegetarisch mit Salat, Soße, Käse",
+        "price": "7,00 €",
+        "additives": "¹⁴"
+      },
+      {
+        "name": "Lahmacun mit Salat und Soße",
+        "price": "8,00 €",
+        "additives": "¹⁴"
+      },
+      {
+        "name": "Lahmacun mit Drehspieß, Salat und Soße",
+        "price": "9,50 €",
+        "additives": "⁴⁵¹⁴"
+      }
+    ],
+    "notes": [],
+    "id": "dueruem",
+    "filter": "doener"
+  },
+  {
+    "name": "Currywurst / Falafel / Pide",
+    "items": [
+      {
+        "name": "Currywurst mit Pommes",
+        "price": "10,50 €",
+        "additives": ""
+      },
+      {
+        "name": "Falafel im Fladenbrot mit Salat und Soße",
+        "price": "7,00 €",
+        "additives": "⁸¹⁴"
+      },
+      {
+        "name": "Falafel‑Teller mit Salat",
+        "price": "12,50 €",
+        "additives": "⁸¹⁴"
+      },
+      {
+        "name": "Falafel‑Box",
+        "price": "7,50 €",
+        "additives": "⁸¹⁴"
+      },
+      {
+        "name": "Pide mit Hackfleisch",
+        "price": "8,50 €",
+        "additives": "¹⁴"
+      },
+      {
+        "name": "Pide mit Spinat und Weichkäse",
+        "price": "9,50 €",
+        "additives": "¹⁴"
+      }
+    ],
+    "notes": [],
+    "id": "klassiker",
+    "filter": "klassiker"
+  },
+  {
+    "name": "Pide, Fladenbrot & Beilagen",
+    "items": [
+      {
+        "name": "Vegetarisches Fladenbrot mit Schafskäse und Salat (klein)",
+        "price": "4,50 €",
+        "additives": ""
+      },
+      {
+        "name": "Vegetarisches Fladenbrot mit Schafskäse und Salat (normal)",
+        "price": "6,50 €",
+        "additives": ""
+      },
+      {
+        "name": "Pommes",
+        "price": "4,00 €",
+        "additives": ""
+      },
+      {
+        "name": "Reis",
+        "price": "4,00 €",
+        "additives": ""
+      },
+      {
+        "name": "Pide mit Hackfleisch und Weichkäse",
+        "price": "9,50 €",
+        "additives": "¹⁴"
+      },
+      {
+        "name": "Pide mit Drehspieß und Käse",
+        "price": "10,50 €",
+        "additives": "⁴⁵¹⁴"
+      },
+      {
+        "name": "Pide mit Sucuk und Käse",
+        "price": "11,50 €",
+        "additives": "²³⁴¹⁴"
+      },
+      {
+        "name": "Extra Ei",
+        "price": "1,00 €",
+        "additives": ""
+      },
+      {
+        "name": "Extra Ei und Käse",
+        "price": "1,50 €",
+        "additives": ""
+      }
+    ],
+    "notes": [],
+    "id": "vegetarisch",
+    "filter": "vegetarisch"
+  },
+  {
+    "name": "Pizzen",
+    "items": [
+      {
+        "name": "Margherita",
+        "price": "8,50 €",
+        "additives": "¹⁴"
+      },
+      {
+        "name": "Peperoni",
+        "price": "9,00 €",
+        "additives": "¹⁴"
+      },
+      {
+        "name": "Champignons",
+        "price": "9,00 €",
+        "additives": "¹⁴"
+      },
+      {
+        "name": "Sucuk",
+        "price": "9,50 €",
+        "additives": "²³⁴¹⁴"
+      },
+      {
+        "name": "Salami",
+        "price": "9,50 €",
+        "additives": "²³⁵⁸¹⁴"
+      },
+      {
+        "name": "Schinken",
+        "price": "9,50 €",
+        "additives": "²³⁵⁸¹⁴"
+      },
+      {
+        "name": "Thunfisch mit Zwiebeln",
+        "price": "10,50 €",
+        "additives": "¹⁴"
+      },
+      {
+        "name": "Kebap mit Drehspieß",
+        "price": "10,00 €",
+        "additives": "¹⁴"
+      },
+      {
+        "name": "Hawaii (Schinken & Ananas)",
+        "price": "10,00 €",
+        "additives": "⁴⁵¹⁴"
+      },
+      {
+        "name": "Toscana (Schinken & Pilze)",
+        "price": "10,00 €",
+        "additives": "²³⁴⁸¹⁴"
+      },
+      {
+        "name": "Milanese (Salami & Pilze)",
+        "price": "10,50 €",
+        "additives": "²³⁴⁸¹⁴"
+      },
+      {
+        "name": "Pescatore (Pilze, Peperoni, frische Tomaten)",
+        "price": "9,50 €",
+        "additives": "¹⁴"
+      },
+      {
+        "name": "Frutti di Mare (Meeresfrüchte, Knoblauch)",
+        "price": "12,50 €",
+        "additives": "¹⁴"
+      },
+      {
+        "name": "Tonno (Thunfisch, Pilze, Zwiebeln)",
+        "price": "11,00 €",
+        "additives": "⁴⁵¹⁴"
+      },
+      {
+        "name": "Spezial (Dönerfleisch, Pilze, Zwiebeln)",
+        "price": "11,50 €",
+        "additives": "¹⁴"
+      }
+    ],
+    "notes": [],
+    "id": "pizza",
+    "filter": "pizza"
+  },
+  {
+    "name": "Flammkuchen",
+    "items": [
+      {
+        "name": "Elsässer oder griechische Art",
+        "price": "9,50 €",
+        "additives": ""
+      },
+      {
+        "name": "Cayan (Dönerfleisch, Salat nach dem Backen)",
+        "price": "11,00 €",
+        "additives": "¹⁴"
+      },
+      {
+        "name": "Diabolo (scharfe Salami, Peperoni, Mais)",
+        "price": "10,00 €",
+        "additives": "²³¹⁴"
+      },
+      {
+        "name": "Vegetarisch (Pilze, Peperoni, Paprika, Oliven, Zwiebeln)",
+        "price": "10,00 €",
+        "additives": "¹⁴"
+      },
+      {
+        "name": "Schinken, Salami",
+        "price": "10,00 €",
+        "additives": "²³⁵⁸¹⁴"
+      }
+    ],
+    "notes": [
+      "Jede weitere Zutat: 0,50 €"
+    ],
+    "id": "flammkuchen",
+    "filter": "pizza"
+  },
+  {
+    "name": "Calzone",
+    "items": [
+      {
+        "name": "Calzone Drehspieß (mit Zwiebeln)",
+        "price": "11,50 €",
+        "additives": "⁴⁵¹⁴"
+      },
+      {
+        "name": "Calzone Dinkelsbühl (Schinken, Salami, Peperoni)",
+        "price": "11,50 €",
+        "additives": "⁴⁵¹⁴"
+      },
+      {
+        "name": "Calzone Sucuk",
+        "price": "10,50 €",
+        "additives": "²³⁴¹⁴"
+      },
+      {
+        "name": "Calzone Spezial (Drehspieß, Pilze, Zwiebeln, Paprika)",
+        "price": "12,50 €",
+        "additives": "⁴⁵¹⁴"
+      }
+    ],
+    "notes": [],
+    "id": "calzone",
+    "filter": "pizza"
+  },
+  {
+    "name": "Getränke",
+    "items": [
+      {
+        "name": "Ayran 0,25 l",
+        "price": "1,50 €",
+        "additives": ""
+      },
+      {
+        "name": "Softgetränke",
+        "price": "3,00 €",
+        "additives": ""
+      },
+      {
+        "name": "Eistee",
+        "price": "2,50 €",
+        "additives": ""
+      },
+      {
+        "name": "Bier",
+        "price": "3,50 €",
+        "additives": ""
+      },
+      {
+        "name": "Radler",
+        "price": "3,50 €",
+        "additives": ""
+      },
+      {
+        "name": "Radler alkoholfrei",
+        "price": "3,50 €",
+        "additives": ""
+      }
+    ],
+    "notes": [],
+    "id": "getraenke",
+    "filter": "getraenke"
+  },
+  {
+    "name": "Spezialangebot",
+    "items": [
+      {
+        "name": "4 Pizzen + 1 l Softgetränk",
+        "price": "38,00 €",
+        "additives": ""
+      }
+    ],
+    "notes": [],
+    "id": "angebote",
+    "filter": "spezial"
+  }
+]
