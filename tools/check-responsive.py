@@ -53,3 +53,12 @@ assert 'Mindestens 1 Tag vorher bestellen.' in page
 assert 'Unsere persönliche Bestätigung abwarten.' in page
 assert 'aria-describedby="preorder-notice"' in page
 print('PASS: contact/form CSS cascade at 320–1600px; full-width mobile submit; visible advance-order and confirmation notice')
+
+menu_css = (ROOT / 'css/menu.css').read_text()
+for width in [320, 360, 390, 430, 640]:
+    for selector in ['.menu-cover', '.menu-group', '.menu-order > .shell']:
+        assert computed(menu_css, selector, width)['grid-template-columns'] == 'minmax(0, 1fr)', (width, selector)
+for width in [768, 1024, 1280]:
+    assert computed(menu_css, '.menu-group', width)['grid-template-columns'].count('minmax') == 1
+assert computed(menu_css, '.menu-item', 320)['grid-template-columns'] == 'minmax(0, 1fr) max-content'
+print('PASS: menu CSS cascade at 320–1280px; stacked mobile sections and separate readable price column')

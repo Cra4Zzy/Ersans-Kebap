@@ -1,0 +1,294 @@
+{
+  "currywurst": {
+    "width": 1200,
+    "height": 1600,
+    "variants": [
+      {
+        "file": "currywurst-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 37340
+      },
+      {
+        "file": "currywurst-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 101354
+      },
+      {
+        "file": "currywurst.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 137896
+      }
+    ]
+  },
+  "hero-kebap": {
+    "width": 1440,
+    "height": 960,
+    "variants": [
+      {
+        "file": "hero-kebap-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 28440
+      },
+      {
+        "file": "hero-kebap-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 83322
+      },
+      {
+        "file": "hero-kebap.webp",
+        "width": 1440,
+        "height": 960,
+        "bytes": 149508
+      }
+    ]
+  },
+  "laden-1": {
+    "width": 1200,
+    "height": 1600,
+    "variants": [
+      {
+        "file": "laden-1-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 46398
+      },
+      {
+        "file": "laden-1-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 148788
+      },
+      {
+        "file": "laden-1.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 213374
+      }
+    ]
+  },
+  "laden-2": {
+    "width": 1200,
+    "height": 1600,
+    "variants": [
+      {
+        "file": "laden-2-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 50604
+      },
+      {
+        "file": "laden-2-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 163686
+      },
+      {
+        "file": "laden-2.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 231296
+      }
+    ]
+  },
+  "laden-3": {
+    "width": 1200,
+    "height": 1600,
+    "variants": [
+      {
+        "file": "laden-3-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 38206
+      },
+      {
+        "file": "laden-3-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 103260
+      },
+      {
+        "file": "laden-3.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 140448
+      }
+    ]
+  },
+  "laden-vorher1": {
+    "width": 1440,
+    "height": 1080,
+    "variants": [
+      {
+        "file": "laden-vorher1-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 12732
+      },
+      {
+        "file": "laden-vorher1-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 29044
+      },
+      {
+        "file": "laden-vorher1.webp",
+        "width": 1440,
+        "height": 1080,
+        "bytes": 48898
+      }
+    ]
+  },
+  "laden-vorher2": {
+    "width": 1440,
+    "height": 1080,
+    "variants": [
+      {
+        "file": "laden-vorher2-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 11796
+      },
+      {
+        "file": "laden-vorher2-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 30680
+      },
+      {
+        "file": "laden-vorher2.webp",
+        "width": 1440,
+        "height": 1080,
+        "bytes": 52336
+      }
+    ]
+  },
+  "neuer-laden1": {
+    "width": 1200,
+    "height": 1600,
+    "variants": [
+      {
+        "file": "neuer-laden1-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 51870
+      },
+      {
+        "file": "neuer-laden1-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 179936
+      },
+      {
+        "file": "neuer-laden1.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 263310
+      }
+    ]
+  },
+  "neuer-laden2": {
+    "width": 1200,
+    "height": 1600,
+    "variants": [
+      {
+        "file": "neuer-laden2-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 44262
+      },
+      {
+        "file": "neuer-laden2-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 149026
+      },
+      {
+        "file": "neuer-laden2.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 215098
+      }
+    ]
+  },
+  "pizza": {
+    "width": 1440,
+    "height": 960,
+    "variants": [
+      {
+        "file": "pizza-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 9108
+      },
+      {
+        "file": "pizza-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 26152
+      },
+      {
+        "file": "pizza.webp",
+        "width": 1440,
+        "height": 960,
+        "bytes": 47670
+      }
+    ]
+  },
+  "wasserschaden1": {
+    "width": 1200,
+    "height": 1600,
+    "variants": [
+      {
+        "file": "wasserschaden1-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 16978
+      },
+      {
+        "file": "wasserschaden1-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 48498
+      },
+      {
+        "file": "wasserschaden1.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 68336
+      }
+    ]
+  },
+  "wasserschaden2": {
+    "width": 1200,
+    "height": 1600,
+    "variants": [
+      {
+        "file": "wasserschaden2-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 13870
+      },
+      {
+        "file": "wasserschaden2-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 47964
+      },
+      {
+        "file": "wasserschaden2.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 69070
+      }
+    ]
+  },
+  "logo-header": {
+    "width": 560,
+    "height": 283
+  }
+}

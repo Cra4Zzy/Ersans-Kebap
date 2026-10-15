@@ -55,3 +55,11 @@ Links, lokale Assets, Datenübernahme, Suchlogik, Öffnungszeiten, JavaScript un
 ## Nachjustierung nach Kundenfeedback
 
 Der Header zeigt jetzt das vorhandene gemeinsame Logo auf dunklem Grund. Die zuvor sehr kleinen Beschriftungen wurden deutlich angehoben. Der Fokus liegt auf 16–17 px für Fließtexte und 17–19 px für Gerichte und Preise. Die Speisekarte erhielt eine durchgehende warme Sand- und Espresso-Farbwelt. Diese konkreten Korrekturen ersetzen die anfängliche Entscheidung für eine rein typografische Header-Wortmarke und kleine redaktionelle Beschriftungen.
+
+## Speisekarte und Ladeoptimierung · 15.10.2026
+
+Verglichen wurden die Speisekarten von [Kebab’ry](https://kebabry.de/speisekarte.html), [Hans Kebab](https://www.hanskebab.de/) und [Kebap with Attitude](https://www.kebapyourlife.de/de/restaurant-menu). Übernommen werden Gestaltungsideen wie deutlich getrennte Produktnamen/Beschreibungen/Preise, gut erreichbare Kategorien und gezielte Food-Fotografie. Aussagen, Produkttexte und Preislogik anderer Betriebe werden nicht übertragen.
+
+Die neue Karte setzt auf warme Papierfarben, dunkles Grün und geröstete Brauntöne. Ein Food-Hero, drei direkte Einstiege, horizontale Kategorien und kontinuierliche Kapitel ersetzen die vielen beigefarbenen Boxen und die schwere Seitenleiste. Namen sind 18 px, Beschreibungen 16 px und Preise 19–20 px. Auf kleinen Bildschirmen werden die Kapitel einspaltig; die Kategorien sind horizontal bedienbar. Alle 64 Positionen, Preise und Zusatzstoffcodes bleiben aus `data/menu.json` erhalten.
+
+Für die Umsetzung dienen die Primärquellen [responsive Bilder](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images), [Bildkompression](https://web.dev/learn/images/automating), [lokale Unternehmensdaten](https://developers.google.com/search/docs/appearance/structured-data/local-business) und [kanonische URLs](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls). Bildgrößen, Markup, CSS-Kaskade und Formularverhalten sind lokal prüfbar. Eine gerenderte Browseransicht, Rich Results Test, Google-Indexierung und reale Netzwerkladezeit wurden in dieser Umgebung nicht geprüft.

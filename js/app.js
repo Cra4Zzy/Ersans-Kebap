@@ -69,6 +69,10 @@ if (typeof document !== "undefined") {
     document.currentScript?.src || new URL("js/app.js", document.baseURI).href;
   const assetPath = (name) =>
     new URL("../img/optimized/" + name + ".webp", scriptUrl).href;
+  const responsiveImageSet = (name, width) =>
+    [480, 960, width].map((size) =>
+      new URL("../img/optimized/" + name + (size === width ? "" : "-" + size) + ".webp", scriptUrl).href + " " + size + "w"
+    ).join(", ");
   const bySelector = (s) => document.querySelector(s);
   const byAll = (s) => Array.from(document.querySelectorAll(s));
   byAll("[data-year]").forEach(
@@ -210,6 +214,7 @@ if (typeof document !== "undefined") {
           setTimeout(
             () => {
               if (id !== changeId) return;
+              dishImage.srcset = preloaded.srcset;
               dishImage.src = preloaded.src;
               dishImage.alt = dish.alt;
               bySelector("#dish-caption").textContent = dish.caption;
@@ -231,6 +236,8 @@ if (typeof document !== "undefined") {
         preloaded.onerror = () => {
           if (id === changeId) dishImage.classList.remove("is-changing");
         };
+        preloaded.sizes = dishImage.sizes;
+        preloaded.srcset = responsiveImageSet(dish.image, dish.image === "currywurst" ? 1200 : 1440);
         preloaded.src = assetPath(dish.image);
         if (preloaded.complete && preloaded.naturalWidth) commit();
       }),
@@ -285,11 +292,22 @@ if (typeof document !== "undefined") {
         selected = b.dataset.menuFilter;
         filterMenu(true);
         const content = bySelector(".menu-content");
+        if (!reducedMotion.matches) content.animate?.(
+          [{ opacity: 0.4, transform: "translateY(6px)" }, { opacity: 1, transform: "translateY(0)" }],
+          { duration: 220, easing: "ease-out" },
+        );
         if (content.getBoundingClientRect().top < 100)
           content.scrollIntoView({
             behavior: reducedMotion.matches ? "instant" : "smooth",
             block: "start",
           });
+      }),
+    );
+    byAll("[data-category-jump]").forEach((link) =>
+      link.addEventListener("click", () => {
+        selected = link.dataset.categoryJump;
+        menuSearch.value = "";
+        filterMenu(true);
       }),
     );
     menuSearch.addEventListener("input", () => filterMenu());
@@ -498,7 +516,7 @@ if (typeof document !== "undefined") {
       activeGallery = byAll("[data-gallery]")
         .filter((b) => b.dataset.gallery === button.dataset.gallery)
         .map((b) => ({
-          src: b.querySelector("img").src,
+          src: b.querySelector("img").dataset.full || b.querySelector("img").src,
           alt: b.querySelector("img").alt,
         }));
       galleryIndex = Number(button.dataset.galleryIndex) || 0;
