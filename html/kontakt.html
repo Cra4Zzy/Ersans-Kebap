@@ -12,7 +12,7 @@
 <meta name="color-scheme" content="light">
 <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../fonts/instrument-serif-normal.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="../css/styles.css?v=20261015-readable">
+<link rel="stylesheet" href="../css/styles.css?v=20261015-form-mobile">
 <script src="../js/app.js" defer>
 </script>
 </head>
@@ -84,7 +84,15 @@
 </h2>
 <p class="form-intro">Sag uns, was du möchtest und wann du es abholen willst. Wir melden uns zur Bestätigung.
 </p>
-<form id="preorderForm" action="https://formspree.io/f/mbdknvvg" method="POST">
+<aside class="preorder-notice" id="preorder-notice" aria-labelledby="preorder-notice-heading">
+<h3 id="preorder-notice-heading">Wichtig für deine Vorbestellung
+</h3>
+<p><strong>Mindestens 1 Tag vorher bestellen.</strong> Bitte plane deine Abholung mit diesem Vorlauf.
+</p>
+<p><strong>Unsere persönliche Bestätigung abwarten.</strong> Erst nach unserer Bestätigung ist deine Bestellung angenommen.
+</p><a class="under-link" href="tel:+4915159078248">Für heute? Bitte direkt anrufen ↗</a>
+</aside>
+<form id="preorderForm" aria-describedby="preorder-notice" action="https://formspree.io/f/mbdknvvg" method="POST">
 <input type="hidden" name="page" value="kontakt-vorbestellung">
 <div class="honeypot" aria-hidden="true">
 <label>Dieses Feld bitte frei lassen
@@ -102,7 +110,7 @@
 <input name="phone" type="tel" autocomplete="tel" maxlength="50" placeholder="Für Rückfragen, optional">
 </label>
 <label>Gewünschte Abholzeit <span>*</span>
-<input required name="time" type="text" maxlength="150" placeholder="z. B. Freitag, 18:30 Uhr">
+<input required name="time" type="text" maxlength="150" aria-describedby="preorder-notice" placeholder="z. B. Freitag, 18:30 Uhr">
 </label>
 <label class="full">Deine Bestellung / Nachricht <span>*</span>
 <textarea required name="message" minlength="10" maxlength="3000" rows="5" placeholder="Was dürfen wir für dich zubereiten? Bitte auch Sonderwünsche angeben.">
@@ -115,7 +123,7 @@
 </div>
 <p class="form-feedback" id="form-feedback" role="status" aria-live="polite" tabindex="-1">
 </p>
-<p class="form-binding-note">Deine Anfrage ist erst nach unserer persönlichen Bestätigung angenommen.
+<p class="form-binding-note"><strong>Bitte beachten:</strong> Mindestens 1 Tag vorher bestellen und unsere persönliche Bestätigung abwarten.
 </p>
 </form>
 </section>

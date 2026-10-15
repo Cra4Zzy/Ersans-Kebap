@@ -32,6 +32,7 @@ Das neue Hauptmotiv unter `img/optimized/hero-kebap.webp` ist KI-generiert und a
 ```bash
 python build.py
 python tools/check-site.py
+python tools/check-responsive.py
 node --check js/app.js
 node tools/test-functions.cjs
 ```
@@ -43,3 +44,7 @@ Eine visuelle Browserprüfung und ein produktiver E-Mail-Eingangstest waren in d
 ## Lesbarkeit und Speisekarte
 
 Die Schriftgrößen wurden auf deutlich lesbarere Werte angehoben: Fließtexte 16–17 px, Menüpunkte 17–18 px und Preise 18–19 px. Kleine Hilfstexte, Links und Footerinformationen wurden ebenfalls vergrößert und ihre Kontraste verstärkt. Das vorhandene gemeinsame Logo steht nun im dunklen Header. Die Speisekarte verwendet warme Sand-, Karamell- und Espressotöne mit klar getrennten Gerichten und Preisen.
+
+## Kontaktformular auf kleinen Bildschirmen
+
+Kontaktbereich bis 900 px einspaltig; Formular und Senden-Schaltfläche passen sich an die verfügbare Breite an. Ein hervorgehobener Hinweis direkt vor den Feldern nennt mindestens 1 Tag Vorlauf und die erforderliche persönliche Bestätigung. `check-responsive.py` prüft statisch die Reihenfolge der relevanten CSS-Regeln an zehn Bildschirmbreiten; es ersetzt keine gerenderte Browserprüfung.
